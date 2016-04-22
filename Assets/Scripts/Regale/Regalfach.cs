@@ -2,22 +2,30 @@ using UnityEngine;
 using System.Collections;
 
 public class Regalfach : MonoBehaviour {
-
-
-
-	[HideInInspector]
+	[ReadOnly]
 	public RegalfachConfig Config;
 
 	private SpriteRenderer sprite;
 
-	void Start()
+	void Awake()
 	{
 		sprite = GetComponent<SpriteRenderer>();
 	}
 
+	void Start()
+	{
+		sprite.sprite = Config.RandomFachSprite();
+	}
+
 	public IItem GrabItem()
 	{
-		BasicItem item = new BasicItem(Config.RandomSprite());
+		int ingrCount = Random.Range(Config.MinIngredientsPerItem, Config.MaxIngredientsPerItem);
+		BasicItem item = new BasicItem(Config.RandomItemSprite());
+		// FIXME: Ben�tigt Abfrage was zugeordnet wurde
+		for(int i=0;i<ingrCount;++i)
+		{
+			item.AddIngredient(Config.PossibleIngredients.RetrieveRandom());
+		}
 		return (item);
 	}
 }

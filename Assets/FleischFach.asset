@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0964ca9817c42478333d2eaf5eb49c, type: 3}
   m_Name: FleischFach
   m_EditorClassIdentifier: 
-  m_Sprites:
+  MinIngredientsPerItem: 1
+  MaxIngredientsPerItem: 1
+  m_ItemSprites:
+  - {fileID: 21300000, guid: 0fd0d7da4496f934c89a30d48d42ef0f, type: 3}
+  m_FachSprites:
   - {fileID: 21300000, guid: aef9147622e4d0248bf537caa25b08d7, type: 3}
   m_Ingredients:
   - m_Name: Schweinefleisch

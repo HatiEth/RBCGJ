@@ -2,8 +2,6 @@ using UnityEngine;
 
 
 public class Regal : MonoBehaviour {
-
-
 	[SerializeField]
 	private Regalfach[] Regalfach;
 	public RegalfachConfig[] PossibleConfigs;
@@ -12,7 +10,7 @@ public class Regal : MonoBehaviour {
 	{
 		foreach(var fach in Regalfach)
 		{
-			fach.Config = PossibleConfigs[Random.Range(0, PossibleConfigs.Length)];
+			fach.Config = PossibleConfigs.RetrieveRandom();
 		}
 	}
 }
