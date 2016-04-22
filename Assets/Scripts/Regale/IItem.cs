@@ -6,6 +6,6 @@ public interface ICanHazNut {
 }
 
 public interface IItem : ICanHazNut {
-	Sprite ItemSprite { get; }
+	GameObject ItemPrefab { get; }
 	Ingredient[] Ingredients { get; }
 }

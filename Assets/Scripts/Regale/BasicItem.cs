@@ -6,38 +6,30 @@ using System.Collections.Generic;
 public class BasicItem : IItem {
 	public bool HasNut
 	{
-		get
-		{
+		get {
 			return (m_HasNut);
 		}
 	}
 
 	public Ingredient[] Ingredients
 	{
-		get
-		{
+		get {
 			return (m_arrIngredients.ToArray());
 		}
 	}
 
-	public Sprite ItemSprite
-	{
-		get
-		{
-			return (m_ItemSprite);
-		}
-	}
+	public GameObject ItemPrefab { get { return (m_ItemPrefab); } }
 
 	private List<Ingredient> m_arrIngredients;
 	private bool m_HasNut = false;
 
-	private Sprite m_ItemSprite;
+	private GameObject m_ItemPrefab;
 
 
-	public BasicItem(Sprite itemSprite)
+	public BasicItem(GameObject ItemPrefab)
 	{
 		m_arrIngredients = new List<Ingredient>();
-		m_ItemSprite = itemSprite;
+		m_ItemPrefab = ItemPrefab;
 	}
 
 	public void AddIngredient(Ingredient ingr)

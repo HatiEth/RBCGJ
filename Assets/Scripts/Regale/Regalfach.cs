@@ -20,7 +20,7 @@ public class Regalfach : MonoBehaviour {
 	public IItem GrabItem()
 	{
 		int ingrCount = Random.Range(Config.MinIngredientsPerItem, Config.MaxIngredientsPerItem);
-		BasicItem item = new BasicItem(Config.RandomItemSprite());
+		BasicItem item = new BasicItem(Config.RandomItem());
 		// FIXME: Ben�tigt Abfrage was zugeordnet wurde
 		for(int i=0;i<ingrCount;++i)
 		{

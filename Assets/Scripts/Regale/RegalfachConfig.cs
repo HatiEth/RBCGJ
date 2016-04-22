@@ -3,9 +3,9 @@ using System.Collections;
 
 [CreateAssetMenu]
 public class RegalfachConfig : ScriptableObject {
-	public Sprite RandomItemSprite()
+	public GameObject RandomItem()
 	{
-		return (m_ItemSprites.RetrieveRandom());
+		return (m_ItemPrefabs.RetrieveRandom());
 	}
 	public Sprite RandomFachSprite()
 	{
@@ -17,7 +17,7 @@ public class RegalfachConfig : ScriptableObject {
 	public Ingredient[] PossibleIngredients { get { return m_Ingredients; } }
 
 	[SerializeField]
-	private Sprite[] m_ItemSprites;
+	private GameObject[] m_ItemPrefabs;
 	[SerializeField]
 	private Sprite[] m_FachSprites;
 	[SerializeField]

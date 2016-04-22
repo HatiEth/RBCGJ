@@ -15,8 +15,13 @@ public class ChangeInspectedOnGrabItem : MonoBehaviour {
 
 		GrabItemEvent.OnGrabItem += (item) =>
 		{
-			m_Image.sprite = item.ItemSprite;
-			m_Text.text = string.Join(", ", item.Ingredients.Select(ingr => ingr.Name).ToArray());
+			while(transform.childCount > 0)
+			{
+				Destroy(transform.GetChild(0).gameObject);
+			}
+			var go = GameObject.Instantiate(item.ItemPrefab);
+			go.transform.parent = this.transform;
+			go.GetComponent<IInspectorInitializer>().Initialize(item);
 		};
 	}
 }
