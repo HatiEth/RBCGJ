@@ -29,7 +29,9 @@ public class InputSystem : MonoBehaviour {
         }
         else if (Input.GetButtonDown("ActionDown"))
         {
-            motherBehaviour.inspect();
+            if(motherBehaviour.holdingItem == null)
+                motherBehaviour.inspect();
+            //else Leg innen Wagen, wenn man sich schon etwas anschaut
         }
         IItem item = null;
         if (Input.GetButtonDown("takeObenLinks"))
@@ -49,5 +51,7 @@ public class InputSystem : MonoBehaviour {
             item = takeControl.take(Enums.TakeType.UntenRechts);
         }
 
+        if (item != null)
+            motherBehaviour.holdingItem = item;
 	}
 }
