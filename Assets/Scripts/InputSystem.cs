@@ -8,10 +8,12 @@ public class InputSystem : MonoBehaviour {
     bool pressedDown;
 
     MotherBehaviour motherBehaviour;
+    TakeControl takeControl;
 
     // Use this for initialization
     void Start () {
-        motherBehaviour = (MotherBehaviour) FindObjectOfType(typeof(MotherBehaviour));
+        motherBehaviour = GetComponent<MotherBehaviour>();
+        takeControl = GetComponent<TakeControl>();
 	}
 	
 	// Update is called once per frame
@@ -29,22 +31,22 @@ public class InputSystem : MonoBehaviour {
         {
             motherBehaviour.inspect();
         }
-
+        IItem item = null;
         if (Input.GetButtonDown("takeObenLinks"))
         {
-            motherBehaviour.take(Enums.TakeType.ObenLinks);
+            item = takeControl.take(Enums.TakeType.ObenLinks);
         }
         else if(Input.GetButtonDown("takeObenRechts"))
         {
-            motherBehaviour.take(Enums.TakeType.ObenRechts);
+            item = takeControl.take(Enums.TakeType.ObenRechts);
         }
         else if (Input.GetButtonDown("takeUntenLinks"))
         {
-            motherBehaviour.take(Enums.TakeType.UntenLinks);
+            item = takeControl.take(Enums.TakeType.UntenLinks);
         }
         else if(Input.GetButtonDown("takeUntenRechts"))
         {
-            motherBehaviour.take(Enums.TakeType.UntenRechts);
+            item = takeControl.take(Enums.TakeType.UntenRechts);
         }
 
 	}

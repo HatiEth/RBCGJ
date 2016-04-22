@@ -28,7 +28,7 @@ GameObject:
   - 61: {fileID: 6169122}
   - 114: {fileID: 11459136}
   - 212: {fileID: 21244860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fach2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,8 @@ GameObject:
   - 61: {fileID: 6127574}
   - 114: {fileID: 11447330}
   - 212: {fileID: 21243938}
-  m_Layer: 0
+  - 114: {fileID: 11472256}
+  m_Layer: 8
   m_Name: Fach1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +65,7 @@ GameObject:
   - 61: {fileID: 6108616}
   - 114: {fileID: 11435278}
   - 212: {fileID: 21289980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fach4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +83,7 @@ GameObject:
   - 61: {fileID: 6122542}
   - 114: {fileID: 11455152}
   - 212: {fileID: 21233758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fach3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,6 +278,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Config: {fileID: 0}
+--- !u!114 &11472256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e178c3e6a5e6d7d419c8d284a0940c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21233758
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -302,7 +314,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -332,7 +344,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: aef9147622e4d0248bf537caa25b08d7, type: 3}
   m_Color: {r: 0.6764706, g: 0.26362458, b: 0.26362458, a: 1}
   m_FlipX: 0
@@ -362,7 +374,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: aef9147622e4d0248bf537caa25b08d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -422,7 +434,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
