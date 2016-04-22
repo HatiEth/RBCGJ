@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0964ca9817c42478333d2eaf5eb49c, type: 3}
+  m_Name: SuessigkeitenFach
+  m_EditorClassIdentifier: 
+  MinIngredientsPerItem: 1
+  MaxIngredientsPerItem: 7
+  m_ItemSprites:
+  - {fileID: 21300000, guid: 1a776d54f732c374586bb1c9a9cd40ec, type: 3}
+  m_FachSprites:
+  - {fileID: 21300000, guid: aef9147622e4d0248bf537caa25b08d7, type: 3}
+  m_Ingredients:
+  - m_Name: Walnuss
+    m_HasNut: 1
+  - m_Name: Zartbitterschokolade
+    m_HasNut: 0
+  - m_Name: Karamell
+    m_HasNut: 0
+  - m_Name: Kokos
+    m_HasNut: 0
+  - m_Name: Zucker
+    m_HasNut: 0
+  - m_Name: Vollmilchschokolade
+    m_HasNut: 0
+  - m_Name: Haselnuss
+    m_HasNut: 1
