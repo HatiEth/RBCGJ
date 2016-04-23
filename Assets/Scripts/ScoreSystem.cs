@@ -22,9 +22,14 @@ public class ScoreSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		OnScoreChange += (newScore) =>
+		{
+			Score = newScore;
+		};
 		StoreItemEvent.OnStoreItem += (item) =>
 		{
-			Score += item.Ingredients.Length;
+			//Score += item.Ingredients.Length;
+			OnScoreChange(Score + item.Ingredients.Length);
 			Items.Add(item);
 
 			if(OnScoreChange != null)
@@ -32,5 +37,7 @@ public class ScoreSystem : MonoBehaviour {
 				OnScoreChange(Score);
 			}
 		};
+
+		OnScoreChange(Score);
 	}
 }

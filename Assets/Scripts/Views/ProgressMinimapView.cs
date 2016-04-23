@@ -20,7 +20,6 @@ public class ProgressMinimapView : MonoBehaviour {
 
 	void Update()
 	{
-
 		float dEndStart = End.position.x - Start.position.x;
 		float dPlayerStart = Player.position.x - Start.position.x;
 
