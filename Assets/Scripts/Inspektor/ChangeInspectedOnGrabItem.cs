@@ -21,6 +21,8 @@ public class ChangeInspectedOnGrabItem : MonoBehaviour {
 			{
 				Destroy(transform.GetChild(cIt).gameObject);
 			}
+            if (item == null)
+                return;
 
 			var go = GameObject.Instantiate(item.ItemPrefab);
 			Vector3 localpos = go.transform.localPosition;

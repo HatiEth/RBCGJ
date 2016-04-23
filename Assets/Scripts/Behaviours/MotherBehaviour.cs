@@ -69,9 +69,8 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void takeFromChild()
     {
-        holdingItem = quicktimeEvent.influenceEvent(-quickTimeRate);
-        if (holdingItem != null)
-            throwAway();
+        if (quicktimeEvent.influenceEvent(-quickTimeRate))
+            holdingItem = child.TakeItem();
     }
 
     public void putIntoCart()

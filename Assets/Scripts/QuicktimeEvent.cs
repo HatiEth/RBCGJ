@@ -7,7 +7,6 @@ public class QuicktimeEvent : MonoBehaviour {
     private Slider slider;
 
     public bool running;
-    private IItem foughtItem;
 
     //Current Value between 0 and 1
     private float currentValue;
@@ -28,41 +27,38 @@ public class QuicktimeEvent : MonoBehaviour {
             slider.normalizedValue = currentValue;
 	}
 
-    public void startEvent(float startingValue, IItem item)
+    public void startEvent(float startingValue)
     {
         running = true;
         slider.enabled = true;
-        foughtItem = item;
         currentValue = startingValue;
     }
 
-    public IItem finishEvent()
+    public bool finishEvent()
     {
         running = false;
         slider.enabled = false;
-        IItem tmp = foughtItem;
-        foughtItem = null;
-        return tmp;
+        return true;
     }
 
-    private IItem throwCheck()
+    private bool throwCheck()
     {
         if(currentValue <= .05f)
         {
             return finishEvent();
         }
 
-        return null;
+        return false;
 
     }
 
-    public IItem influenceEvent(float value)
+    public bool influenceEvent(float value)
     {
         currentValue = Mathf.Clamp01(currentValue + value);
         return throwCheck();
     }
 
-    public IItem tryToInspect()
+    public bool tryToInspect()
     {
         //Befindet es sich in der entsprechenden Zone?
         if (Mathf.Abs(currentValue - targetSpot_value) <= targetSpot_tolerance)
@@ -70,6 +66,6 @@ public class QuicktimeEvent : MonoBehaviour {
             return finishEvent();
         }
 
-        return null;
+        return false;
     }
 }
