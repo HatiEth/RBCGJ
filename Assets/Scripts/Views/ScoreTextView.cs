@@ -9,7 +9,7 @@ public class ScoreTextView : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		m_Text = GetComponent<Text>();
-		ScoreSystem.OnScoreChange += (newScore) =>
+		ScoreSystem.OnScoreChange += (_, newScore) =>
 		{
 			m_Text.text = "" + newScore;
 		};
