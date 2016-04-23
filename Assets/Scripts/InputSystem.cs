@@ -34,24 +34,24 @@ public class InputSystem : MonoBehaviour {
             //else Leg innen Wagen, wenn man sich schon etwas anschaut
         }
         IItem item = null;
-        if (Input.GetButtonDown("takeObenLinks"))
+
+        if(motherBehaviour.handsFree())
         {
-            item = takeControl.take(Enums.TakeType.Oben);
-        }
-        else if(Input.GetButtonDown("takeObenRechts"))
-        {
-            item = takeControl.take(Enums.TakeType.Mitte);
-        }
-        else if (Input.GetButtonDown("takeUntenLinks"))
-        {
-            item = takeControl.take(Enums.TakeType.Unten);
-        }
-        else if(Input.GetButtonDown("takeUntenRechts"))
-        {
-            item = takeControl.take(Enums.TakeType.UntenRechts);
+            if (Input.GetButtonDown("takeOben"))
+            {
+                item = takeControl.take(Enums.TakeType.Oben);
+            }
+            else if(Input.GetButtonDown("takeMitte"))
+            {
+                item = takeControl.take(Enums.TakeType.Mitte);
+            }
+            else if (Input.GetButtonDown("takeUnten"))
+            {
+                item = takeControl.take(Enums.TakeType.Unten);
+            }
         }
 
         if (item != null)
-            motherBehaviour.holdingItem = item;
+            motherBehaviour.setItem(item);
 	}
 }

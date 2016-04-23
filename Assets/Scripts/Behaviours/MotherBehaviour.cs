@@ -19,6 +19,11 @@ public class MotherBehaviour : MonoBehaviour {
         //Aktiviere Buttons o.Ä.
     }
 
+    public bool handsFree()
+    {
+        return holdingItem == null;
+    }
+
    
 
     public void giveToChild()
