@@ -58,8 +58,11 @@ public class MotherBehaviour : MonoBehaviour {
     {
         if (quicktimeEvent.tryToInspect())
         { 
-            holdingItem = child.TakeItem();
-            inspect();
+            if(child.holdingItem != null)
+            { 
+                holdingItem = child.TakeItem();
+                inspect();
+            }
         }
     }
 
@@ -71,7 +74,7 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void takeFromChild()
     {
-        if (quicktimeEvent.influenceEvent(-quickTimeRate))
+        if (quicktimeEvent.influenceEvent(-quickTimeRate) && child.holdingItem != null)
             holdingItem = child.TakeItem();
     }
 
