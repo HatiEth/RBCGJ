@@ -963,6 +963,7 @@ GameObject:
   - 114: {fileID: 1248988178}
   - 114: {fileID: 1248988177}
   - 114: {fileID: 1248988180}
+  - 114: {fileID: 1248988181}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1026,7 +1027,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248988178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248988181}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1248988178
@@ -1075,6 +1087,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Thumb: {fileID: 1430917488}
   Other: {fileID: 1675868518}
+--- !u!114 &1248988181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248988175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4702f7f1eda5245aa0e8d14070fc79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1316518338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1416,7 @@ GameObject:
   - 114: {fileID: 1675868516}
   - 114: {fileID: 1675868515}
   - 114: {fileID: 1675868518}
+  - 114: {fileID: 1675868519}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1456,7 +1480,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675868516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675868519}
+        m_MethodName: Change
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1675868516
@@ -1505,6 +1540,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Thumb: {fileID: 1430917488}
   Other: {fileID: 1248988180}
+--- !u!114 &1675868519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1675868513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1f220b38e46dd46959562f5c6372c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734906885
 GameObject:
   m_ObjectHideFlags: 0
