@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ChildBehaviour : MonoBehaviour {
 
+
 	bool eating;
 	float angryness;
     IItem holdingItem;
@@ -39,7 +40,7 @@ public class ChildBehaviour : MonoBehaviour {
 
 	private void makeDecision()
 	{
-		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, 5);
+		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, (int)Enums.TakeType.COUNT);
 		holdingItem = takeControl.take(takeDecision);
 
 		if (holdingItem != null)
