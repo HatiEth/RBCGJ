@@ -39,6 +39,7 @@ public class TakeControl : MonoBehaviour {
 		if (hit.collider != null)
 		{
 			IItem item = hit.collider.gameObject.GetComponent<Regalfach>().GrabItem();
+			Debug.Log(item);
 			StoreItemEvent.Send(item);
 			return item;
 		}
