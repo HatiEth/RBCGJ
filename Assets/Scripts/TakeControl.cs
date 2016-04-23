@@ -2,13 +2,21 @@ using UnityEngine;
 using System.Collections;
 
 public class TakeControl : MonoBehaviour {
-	public GameObject obenLinks;
-	public GameObject obenRechts;
-	public GameObject untenLinks;
-	public GameObject untenRechts;
 
+    [SerializeField]
+    private GameObject oben;
 
-	public LayerMask mask;
+    [SerializeField]
+    private GameObject mitte;
+
+    [SerializeField]
+    private GameObject unten;
+
+    //[SerializeField]
+   //private GameObject untenRechts;
+
+    [SerializeField]
+    private LayerMask mask;
 
 	public IItem take(Enums.TakeType takeAction)
 	{
@@ -16,20 +24,17 @@ public class TakeControl : MonoBehaviour {
 		//Debug.Log("Take:" + takeAction);
 		switch (takeAction)
 		{
-			case Enums.TakeType.ObenLinks:
-				selectedZone = obenLinks;
-				break;
-			case Enums.TakeType.ObenRechts:
-				selectedZone = obenRechts;
-				break;
-			case Enums.TakeType.UntenLinks:
-				selectedZone = untenLinks;
-				break;
-			case Enums.TakeType.UntenRechts:
-				selectedZone = untenRechts;
-				break;
+            case Enums.TakeType.Oben:
+                selectedZone = oben;
+                break;
+            case Enums.TakeType.Mitte:
+                selectedZone = mitte;
+                break;
+            case Enums.TakeType.Unten:
+                selectedZone = unten;
+                break;
 		}
-		RaycastHit2D hit = Physics2D.CircleCast(selectedZone.transform.position, 0.25f, new Vector2(0, 0), 0, mask);
+        RaycastHit2D hit = Physics2D.BoxCast(selectedZone.transform.position, new Vector2(1.5f, 1f/3f),0,Vector2.zero, 0f, mask);
 
 		if (hit.collider != null)
 		{

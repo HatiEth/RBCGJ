@@ -1,5 +1,5 @@
 ﻿public class Enums
 {
 
-    public enum TakeType { None, ObenLinks, ObenRechts, UntenLinks, UntenRechts };
+    public enum TakeType { None, Oben, Mitte, Unten };
 }
