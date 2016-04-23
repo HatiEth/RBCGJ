@@ -33,6 +33,7 @@ public class ChildBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+        Debug.Log(holdingItem == null);
         if(quicktimeEvent.running)
         {
             if(eatingProgress == 1.0f)
@@ -62,7 +63,6 @@ public class ChildBehaviour : MonoBehaviour {
 	{
 		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, (int)Enums.TakeType.COUNT);
 		holdingItem = takeControl.take(takeDecision);
-
 		if (holdingItem != null)
         {
             //1/3 Chance zu essen,  2/3 in den Wagen zu legen
@@ -77,7 +77,7 @@ public class ChildBehaviour : MonoBehaviour {
 	{
         Debug.Log("ESSEN");
         //Lets go animator
-        quicktimeEvent.startEvent(1.0f, holdingItem);
+        quicktimeEvent.startEvent(1.0f);
 
 	}
 
@@ -99,15 +99,15 @@ public class ChildBehaviour : MonoBehaviour {
 	//Called by Keyframe
 	public void finishedPuttingIntoCart()
 	{
-        Debug.Log("Ab in den Wagen");
+        Debug.Log("Finished Putting Into Cart");
 		StoreItemEvent.Send(holdingItem);
 		holdingItem = null;
     }
 
 	public IItem TakeItem()
 	{
-		var item = holdingItem;
+		IItem item = holdingItem;
 		holdingItem = null;
-		return (item);
+		return item;
 	}
 }

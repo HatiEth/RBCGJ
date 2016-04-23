@@ -56,9 +56,11 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void checkChildItem()
     {
-        holdingItem = quicktimeEvent.tryToInspect();
-        if(holdingItem != null)
+        if (quicktimeEvent.tryToInspect())
+        { 
+            holdingItem = child.TakeItem();
             inspect();
+        }
     }
 
     public void throwAway()
