@@ -1,27 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class MotherBehaviour : MonoBehaviour {
 
     public IItem holdingItem;
+    
 
-    public ChildBehaviour child;
-  
-	// Use this for initialization
-	void Start () {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
-	}
+    [SerializeField]
+    private ChildBehaviour child;
+
+    public bool inspecting;
+    
+    public QuicktimeEvent quicktimeEvent;
+    [SerializeField]
+    private float quickTimeRate;
+
+    // Use this for initialization
+    void Start () {
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
+        quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
+    }
 
     public void setItem(IItem item)
     {
         holdingItem = item;
-
         //Aktiviere Buttons o.Ä.
     }
 
     public bool handsFree()
     {
-        return holdingItem == null;
+        return (holdingItem == null);
+    }
+
+    void setHandsFree()
+    {
+        GrabItemEvent.Send(null);
+        inspecting = false;
+        holdingItem = null;
     }
 
    
@@ -29,24 +45,38 @@ public class MotherBehaviour : MonoBehaviour {
     public void giveToChild()
     {
         child.eat(holdingItem);
-        holdingItem = null;
+        setHandsFree();
     }
 
     public void inspect()
     {
-		holdingItem = child.TakeItem();
+		inspecting = true;
 		GrabItemEvent.Send(holdingItem);
+    }
+
+    public void checkChildItem()
+    {
+        holdingItem = quicktimeEvent.tryToInspect();
+        if(holdingItem != null)
+            inspect();
     }
 
     public void throwAway()
     {
-        GrabItemEvent.Send(null);
-        holdingItem = null;
+        //AnimationStuff();
+        setHandsFree();
+    }
+
+    public void takeFromChild()
+    {
+        holdingItem = quicktimeEvent.influenceEvent(-quickTimeRate);
+        if (holdingItem != null)
+            throwAway();
     }
 
     public void putIntoCart()
     {
         StoreItemEvent.Send(holdingItem);
-        holdingItem = null;
+        setHandsFree();
     }
 }

@@ -20,27 +20,27 @@ public class InputSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+            if (Input.GetButtonDown("ActionLeft"))
+            {
+                if (motherBehaviour.handsFree() && motherBehaviour.quicktimeEvent.running)
+                    motherBehaviour.takeFromChild();
+                else if (!motherBehaviour.handsFree())
+                    motherBehaviour.throwAway();
+            }
+            else if (Input.GetButtonDown("ActionUp") && !motherBehaviour.handsFree())
+            {
+                motherBehaviour.giveToChild();
+            }
+            else if (Input.GetButtonDown("ActionDown"))
+            {
+                if (motherBehaviour.handsFree())
+                    motherBehaviour.checkChildItem();
+                else if (motherBehaviour.inspecting)
+                    motherBehaviour.putIntoCart();
+                else
+                    motherBehaviour.inspect();
+        }
 
-		if (Input.GetButtonDown("ActionRight"))
-		{
-			motherBehaviour.throwAway();
-		}
-		else if (Input.GetButtonDown("ActionUp"))
-		{
-			motherBehaviour.giveToChild();
-		}
-		else if (Input.GetButtonDown("ActionDown"))
-		{
-			if (motherBehaviour.holdingItem == null)
-			{
-				motherBehaviour.inspect();
-			}
-			else
-			{
-				StoreItemEvent.Send(motherBehaviour.holdingItem);
-				motherBehaviour.holdingItem = null;
-			}
-		}
 		IItem item = null;
 
 		if (motherBehaviour.handsFree())
@@ -58,10 +58,5 @@ public class InputSystem : MonoBehaviour {
 				item = takeControl.take(Enums.TakeType.Unten);
 			}
 		}
-
-		/*
-		if (item != null)
-            motherBehaviour.setItem(item);
-		*/
 	}
 }
