@@ -11,6 +11,8 @@ GameObject:
   - 222: {fileID: 22261186}
   - 114: {fileID: 11442512}
   - 114: {fileID: 11429364}
+  - 114: {fileID: 11452484}
+  - 114: {fileID: 11455454}
   m_Layer: 5
   m_Name: Schokoriegel3
   m_TagString: Untagged
@@ -106,6 +108,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11452484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4f071343c08014abc04a4e3a31b5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FreedomX: 0
+  FreedomY: 0
+--- !u!114 &11455454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717e1c53ae55ac441bfd8fd39c25d596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &22214980
 CanvasRenderer:
   m_ObjectHideFlags: 1

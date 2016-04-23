@@ -11,6 +11,8 @@ GameObject:
   - 222: {fileID: 22261186}
   - 114: {fileID: 11442512}
   - 114: {fileID: 11434516}
+  - 114: {fileID: 11431144}
+  - 114: {fileID: 11432260}
   m_Layer: 5
   m_Name: Schokoriegel2
   m_TagString: Untagged
@@ -68,6 +70,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '{{Zutaten}}'
+--- !u!114 &11431144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4f071343c08014abc04a4e3a31b5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11432260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717e1c53ae55ac441bfd8fd39c25d596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11434516
 MonoBehaviour:
   m_ObjectHideFlags: 1

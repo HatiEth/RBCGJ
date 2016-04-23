@@ -14,17 +14,17 @@ public class MenuRiegelOnMove : MonoBehaviour, IMoveHandler {
 
 	public void OnMove(AxisEventData eventData)
 	{
-		if(eventData.moveDir == MoveDirection.Down)
-		{
-			eventData.moveDir = MoveDirection.Up;
-		}
+		Debug.Log("Event onMove");
+		if (eventData.used) return;
 		eventData.Use();
+
 		if (m_IsMoving || Other.m_IsMoving)
+		{
+			EventSystem.current.SetSelectedGameObject(this.gameObject);
 			return;
+		}
 
 		m_IsMoving = true; Other.m_IsMoving = true;
-
-		EventSystem.current.SetSelectedGameObject(Other.gameObject);
 
 		Thumb.Lift();
 		Vector3 spawn = Other.transform.position;
@@ -64,7 +64,7 @@ public class MenuRiegelOnMove : MonoBehaviour, IMoveHandler {
 		}
 
 		transform.position = Vector3.Lerp(transform.position, position, 1f);
-		yield return null;
+		yield return new WaitForSeconds(0.2f);
 		m_IsMoving = false;
 	}
 }

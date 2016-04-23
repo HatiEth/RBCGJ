@@ -3,22 +3,22 @@ using System.Collections;
 
 public class ChildBehaviour : MonoBehaviour {
 
-    private float eatingProgress;
-    [SerializeField]
-    private float eatingRate;
-    [SerializeField]
-    private float quickTimeRate;
+	private float eatingProgress;
+	[SerializeField]
+	private float eatingRate;
+	[SerializeField]
+	private float quickTimeRate;
 
 	public IItem holdingItem { get; protected set; }
 
-    TakeControl takeControl;
-    private float[] DoSomethingCooldown = { 1.5f, 1.5f };
+	TakeControl takeControl;
+	private float[] DoSomethingCooldown = { 1.5f, 1.5f };
 
 	[SerializeField]
 	private int Health = 3;
 
 
-    private QuicktimeEvent quicktimeEvent;
+	private QuicktimeEvent quicktimeEvent;
 
 	public delegate void ChangeHealth(int newHealth);
 	public static event ChangeHealth OnHealthChanged;
@@ -27,27 +27,27 @@ public class ChildBehaviour : MonoBehaviour {
 	void Start()
 	{
 		takeControl = GetComponent<TakeControl>();
-        quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
+		quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-        Debug.Log(holdingItem == null);
-        if(quicktimeEvent.running)
-        {
-            if(eatingProgress == 1.0f)
-            {
-                quicktimeEvent.finishEvent();
-                finishedEating();
-            }
-            else
-            { 
-                quicktimeEvent.influenceEvent(quickTimeRate * Time.deltaTime);
-                eatingProgress = Mathf.Clamp01(eatingProgress + eatingRate * Time.deltaTime);
-            }
-            
-        }
+		//Debug.Log(holdingItem == null);
+		if (quicktimeEvent.running)
+		{
+			if (eatingProgress == 1.0f)
+			{
+				quicktimeEvent.finishEvent();
+				finishedEating();
+			}
+			else
+			{
+				quicktimeEvent.influenceEvent(quickTimeRate * Time.deltaTime);
+				eatingProgress = Mathf.Clamp01(eatingProgress + eatingRate * Time.deltaTime);
+			}
+
+		}
 
 		//Abklingzeit und es darf nichts halten
 		if (DoSomethingCooldown[0] <= 0.0f && holdingItem == null)
@@ -55,8 +55,8 @@ public class ChildBehaviour : MonoBehaviour {
 			makeDecision();
 		}
 
-        if(DoSomethingCooldown[0] > 0)
-		DoSomethingCooldown[0] -= Time.deltaTime;
+		if (DoSomethingCooldown[0] > 0)
+			DoSomethingCooldown[0] -= Time.deltaTime;
 	}
 
 	private void makeDecision()
@@ -64,20 +64,20 @@ public class ChildBehaviour : MonoBehaviour {
 		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, (int)Enums.TakeType.COUNT);
 		holdingItem = takeControl.take(takeDecision);
 		if (holdingItem != null)
-        {
-            //1/3 Chance zu essen,  2/3 in den Wagen zu legen
-            if (Random.Range(0,3) == 2)
-                eat(holdingItem);
-            else
-                finishedPuttingIntoCart();
-        }
-    }
+		{
+			//1/3 Chance zu essen,  2/3 in den Wagen zu legen
+			if (Random.Range(0, 3) == 2)
+				eat(holdingItem);
+			else
+				finishedPuttingIntoCart();
+		}
+	}
 
 	public void eat(IItem itemToEat)
 	{
-        Debug.Log("ESSEN");
-        //Lets go animator
-        quicktimeEvent.startEvent(1.0f);
+		Debug.Log("ESSEN");
+		//Lets go animator
+		quicktimeEvent.startEvent(1.0f);
 
 	}
 
@@ -90,19 +90,19 @@ public class ChildBehaviour : MonoBehaviour {
 			if (OnHealthChanged != null) { OnHealthChanged(Health); }
 		}
 
-        eatingProgress = 0.0f;
-        DoSomethingCooldown[0] = DoSomethingCooldown[1];
-        holdingItem = null;
+		eatingProgress = 0.0f;
+		DoSomethingCooldown[0] = DoSomethingCooldown[1];
+		holdingItem = null;
 	}
 
 
 	//Called by Keyframe
 	public void finishedPuttingIntoCart()
 	{
-        Debug.Log("Finished Putting Into Cart");
+		Debug.Log("Finished Putting Into Cart");
 		StoreItemEvent.Send(holdingItem);
 		holdingItem = null;
-    }
+	}
 
 	public IItem TakeItem()
 	{
