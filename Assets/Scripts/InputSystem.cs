@@ -58,5 +58,8 @@ public class InputSystem : MonoBehaviour {
 				item = takeControl.take(Enums.TakeType.Unten);
 			}
 		}
+
+        if(item != null)
+            motherBehaviour.setItem(item);
 	}
 }
