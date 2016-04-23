@@ -25,10 +25,11 @@ public class ScoreSystem : MonoBehaviour {
 		OnScoreChange += (newScore) =>
 		{
 			Score = newScore;
+			Debug.Log("Score changed " + newScore);
 		};
 		StoreItemEvent.OnStoreItem += (item) =>
 		{
-			//Score += item.Ingredients.Length;
+			Debug.Log("Stored " + item);
 			OnScoreChange(Score + item.Ingredients.Length);
 			Items.Add(item);
 
