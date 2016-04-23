@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb70e6689eb7b064982542b07f0504af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Freedoms: {x: 1, y: 1, z: 0}
+  Freedoms: {x: 1, y: 0, z: 0}
   Followee: {fileID: 1583536325}
 --- !u!1001 &241765416
 Prefab:
@@ -458,11 +458,11 @@ Prefab:
       objectReference: {fileID: 1583536325}
     - target: {fileID: 22407486, guid: fd5ba252ca95c6a47bccf0a59e3a4cae, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22434042, guid: fd5ba252ca95c6a47bccf0a59e3a4cae, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22460468, guid: fd5ba252ca95c6a47bccf0a59e3a4cae, type: 2}
       propertyPath: m_AnchorMin.y
