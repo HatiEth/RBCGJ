@@ -34,11 +34,13 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void throwAway()
     {
-        
+        GrabItemEvent.Send(null);
+        holdingItem = null;
     }
 
     public void putIntoCart()
     {
-        
+        StoreItemEvent.Send(holdingItem);
+        holdingItem = null;
     }
 }

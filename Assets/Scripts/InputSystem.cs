@@ -36,15 +36,15 @@ public class InputSystem : MonoBehaviour {
         IItem item = null;
         if (Input.GetButtonDown("takeObenLinks"))
         {
-            item = takeControl.take(Enums.TakeType.ObenLinks);
+            item = takeControl.take(Enums.TakeType.Oben);
         }
         else if(Input.GetButtonDown("takeObenRechts"))
         {
-            item = takeControl.take(Enums.TakeType.ObenRechts);
+            item = takeControl.take(Enums.TakeType.Mitte);
         }
         else if (Input.GetButtonDown("takeUntenLinks"))
         {
-            item = takeControl.take(Enums.TakeType.UntenLinks);
+            item = takeControl.take(Enums.TakeType.Unten);
         }
         else if(Input.GetButtonDown("takeUntenRechts"))
         {
