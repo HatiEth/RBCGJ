@@ -15,9 +15,7 @@ public class ThumbUIControl : MonoBehaviour {
 
 	IEnumerator LiftThumb()
 	{
-		Debug.Log("wait for it");
 		yield return StartCoroutine(ChangeThumb(DownRotationAngle, UpRotationAngle));
-		Debug.Log("place it");
 		yield return StartCoroutine(ChangeThumb(UpRotationAngle, DownRotationAngle));
 	}
 
