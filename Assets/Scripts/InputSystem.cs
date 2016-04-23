@@ -54,10 +54,6 @@ public class InputSystem : MonoBehaviour {
 		{
             item = takeControl.take(Enums.TakeType.Unten);
 		}
-		else if (Input.GetButtonDown("takeUntenRechts"))
-		{
-			item = takeControl.take(Enums.TakeType.UntenRechts);
-		}
 
 		/*
 		if (item != null)

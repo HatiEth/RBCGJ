@@ -29,8 +29,8 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void inspect()
     {
-        GrabItemEvent.Send(child.holdingItem);
-		child.holdingItem = null;
+		holdingItem = child.TakeItem();
+		GrabItemEvent.Send(holdingItem);
     }
 
     public void throwAway()
