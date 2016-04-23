@@ -75,6 +75,7 @@ public class ChildBehaviour : MonoBehaviour {
 
 	public void eat(IItem itemToEat)
 	{
+        Debug.Log("ESSEN");
         //Lets go animator
         quicktimeEvent.startEvent(1.0f, holdingItem);
 
@@ -98,16 +99,10 @@ public class ChildBehaviour : MonoBehaviour {
 	//Called by Keyframe
 	public void finishedPuttingIntoCart()
 	{
+        Debug.Log("Ab in den Wagen");
 		StoreItemEvent.Send(holdingItem);
 		holdingItem = null;
     }
-
-    public IItem motherTakesItem()
-    {
-        IItem tmp = holdingItem;
-        holdingItem = null;
-        return tmp;
-	}
 
 	public IItem TakeItem()
 	{

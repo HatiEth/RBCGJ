@@ -21,6 +21,8 @@ public class ChangeInspectedOnGrabItem : MonoBehaviour {
 			{
 				Destroy(transform.GetChild(cIt).gameObject);
 			}
+            if (item == null)
+                return;
 
 			if (item == null) return;
 
