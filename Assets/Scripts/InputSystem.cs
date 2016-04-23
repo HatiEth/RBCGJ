@@ -42,22 +42,26 @@ public class InputSystem : MonoBehaviour {
 			}
 		}
 		IItem item = null;
-		if (Input.GetButtonDown("takeObenLinks"))
-		{
-            item = takeControl.take(Enums.TakeType.Oben);
-		}
-		else if (Input.GetButtonDown("takeObenRechts"))
-		{
-            item = takeControl.take(Enums.TakeType.Mitte);
-		}
-		else if (Input.GetButtonDown("takeUntenLinks"))
-		{
-            item = takeControl.take(Enums.TakeType.Unten);
-		}
+
+        if(motherBehaviour.handsFree())
+        {
+            if (Input.GetButtonDown("takeOben"))
+            {
+                item = takeControl.take(Enums.TakeType.Oben);
+            }
+            else if(Input.GetButtonDown("takeMitte"))
+            {
+                item = takeControl.take(Enums.TakeType.Mitte);
+            }
+            else if (Input.GetButtonDown("takeUnten"))
+            {
+                item = takeControl.take(Enums.TakeType.Unten);
+            }
+        }
 
 		/*
 		if (item != null)
-			motherBehaviour.holdingItem = item;
+            motherBehaviour.setItem(item);
 		*/
 	}
 }
