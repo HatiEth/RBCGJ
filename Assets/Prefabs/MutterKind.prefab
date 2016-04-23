@@ -300,10 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bb272a4a13e9e4faebb4d7f0c80cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obenLinks: {fileID: 148452}
-  obenRechts: {fileID: 160390}
-  untenLinks: {fileID: 154688}
-  untenRechts: {fileID: 0}
+  oben: {fileID: 148452}
+  mitte: {fileID: 160390}
+  unten: {fileID: 154688}
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -329,10 +328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bb272a4a13e9e4faebb4d7f0c80cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obenLinks: {fileID: 0}
-  obenRechts: {fileID: 0}
-  untenLinks: {fileID: 0}
-  untenRechts: {fileID: 0}
+  oben: {fileID: 0}
+  mitte: {fileID: 0}
+  unten: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 256
