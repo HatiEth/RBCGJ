@@ -16,6 +16,8 @@ public class ChildBehaviour : MonoBehaviour {
 	[SerializeField]
 	private int Health = 3;
 
+	public IItem holdingItem;
+
 	public delegate void ChangeHealth(int newHealth);
 	public static event ChangeHealth OnHealthChanged;
 

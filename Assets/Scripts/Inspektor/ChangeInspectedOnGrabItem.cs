@@ -15,12 +15,20 @@ public class ChangeInspectedOnGrabItem : MonoBehaviour {
 
 		GrabItemEvent.OnGrabItem += (item) =>
 		{
-			while(transform.childCount > 0)
+			// Destroy previous holding item
+			UnityEngine.Assertions.Assert.IsTrue(transform.childCount <= 1);
+			for (int cIt = 0; cIt < transform.childCount;++cIt)
 			{
-				Destroy(transform.GetChild(0).gameObject);
+				Destroy(transform.GetChild(cIt).gameObject);
 			}
+
 			var go = GameObject.Instantiate(item.ItemPrefab);
+			Vector3 localpos = go.transform.localPosition;
+
 			go.transform.parent = this.transform;
+			go.transform.localPosition = localpos;
+			go.transform.localScale = Vector3.one;
+
 			go.GetComponent<IInspectorInitializer>().Initialize(item);
 		};
 	}
