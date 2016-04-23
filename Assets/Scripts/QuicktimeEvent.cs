@@ -19,7 +19,7 @@ public class QuicktimeEvent : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         slider = GetComponent<Slider>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,14 +30,14 @@ public class QuicktimeEvent : MonoBehaviour {
     public void startEvent(float startingValue)
     {
         running = true;
-        slider.enabled = true;
+        this.gameObject.SetActive(true);
         currentValue = startingValue;
     }
 
     public bool finishEvent()
     {
         running = false;
-        slider.enabled = false;
+        this.gameObject.SetActive(false);
         return true;
     }
 
@@ -65,7 +65,6 @@ public class QuicktimeEvent : MonoBehaviour {
         {
             return finishEvent();
         }
-
         return false;
     }
 }

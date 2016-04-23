@@ -28,4 +28,9 @@ public class ScoreSystem : MonoBehaviour {
 
 		OnScoreChange(Score, Score);
 	}
+
+    public List<IItem> getList()
+    {
+        return Items;
+    }
 }

@@ -20,7 +20,13 @@ public class InputSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-            if (Input.GetButtonDown("ActionLeft"))
+        if(KassenEvent.isRunning())
+        {
+            KassenInput();
+            return;
+        }
+
+        if (Input.GetButtonDown("ActionLeft"))
             {
                 if (motherBehaviour.handsFree() && motherBehaviour.quicktimeEvent.running)
                     motherBehaviour.takeFromChild();
@@ -58,8 +64,21 @@ public class InputSystem : MonoBehaviour {
 				item = takeControl.take(Enums.TakeType.Unten);
 			}
 		}
-
         if(item != null)
-            motherBehaviour.setItem(item);
+            motherBehaviour.takeFromShelf(item);
 	}
+
+    private void KassenInput()
+    {
+        if (Input.GetButtonDown("ActionLeft"))
+        {
+            motherBehaviour.throwAway();
+            KassenEvent.grabNextItem();
+        }
+        else if (Input.GetButtonDown("ActionDown"))
+        {
+            motherBehaviour.approveKasse();
+            KassenEvent.grabNextItem();
+        }
+    }
 }

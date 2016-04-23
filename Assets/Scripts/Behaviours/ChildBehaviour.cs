@@ -9,12 +9,23 @@ public class ChildBehaviour : MonoBehaviour {
 	[SerializeField]
 	private float quickTimeRate;
 
-	public IItem holdingItem { get; protected set; }
+	public IItem holdItem { get; protected set; }
 
 	TakeControl takeControl;
-	private float[] DoSomethingCooldown = { 1.5f, 1.5f };
 
-	[SerializeField]
+    [SerializeField]
+	private float[] DoSomethingCooldown = { 3.0f, 3.0f };
+
+    [SerializeField]
+    //1. Wert = akutelle Dauer/Zähler   2. Wert = Max Wert  3. Wert = Effekt der mit Zeit multipliziert wird
+    private float[] enrageEffect = { 10.0f, 10.0f, 1.2f };
+
+    [SerializeField]
+    //1. Wert = akutelle Dauer/Zähler   2. Wert = Max Wert  3. Wert = Effekt der mit Zeit multipliziert wird
+    private float[] soothedEffect = { 10.0f, 10.0f, 0.8f };
+
+
+    [SerializeField]
 	private int Health = 3;
 
 
@@ -28,12 +39,20 @@ public class ChildBehaviour : MonoBehaviour {
 	{
 		takeControl = GetComponent<TakeControl>();
 		quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
+        quicktimeEvent.gameObject.SetActive(false);
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		//Debug.Log(holdingItem == null);
+        if (KassenEvent.isRunning())
+            return;
+
+
+        //Mögliche aktive Effekte berechnen: verschnellert oder verlangsamt Simulation
+        float deltaTime = calculateEffectValue(Time.deltaTime);
+
+
 		if (quicktimeEvent.running)
 		{
 			if (eatingProgress == 1.0f)
@@ -43,31 +62,30 @@ public class ChildBehaviour : MonoBehaviour {
 			}
 			else
 			{
-				quicktimeEvent.influenceEvent(quickTimeRate * Time.deltaTime);
+				quicktimeEvent.influenceEvent(quickTimeRate * deltaTime);
 				eatingProgress = Mathf.Clamp01(eatingProgress + eatingRate * Time.deltaTime);
 			}
-
 		}
 
 		//Abklingzeit und es darf nichts halten
-		if (DoSomethingCooldown[0] <= 0.0f && holdingItem == null)
+		if (DoSomethingCooldown[0] <= 0.0f && holdItem == null)
 		{
 			makeDecision();
 		}
 
 		if (DoSomethingCooldown[0] > 0)
-			DoSomethingCooldown[0] -= Time.deltaTime;
+			DoSomethingCooldown[0] -= deltaTime;
 	}
 
 	private void makeDecision()
 	{
 		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, (int)Enums.TakeType.COUNT);
-		holdingItem = takeControl.take(takeDecision);
-		if (holdingItem != null)
+		holdItem = takeControl.take(takeDecision);
+        if (holdItem != null)
 		{
 			//1/3 Chance zu essen,  2/3 in den Wagen zu legen
-			if (Random.Range(0, 3) == 2)
-				eat(holdingItem);
+			if (Random.Range(0, 6) == 0)
+				eat(holdItem);
 			else
 				finishedPuttingIntoCart();
 		}
@@ -75,39 +93,71 @@ public class ChildBehaviour : MonoBehaviour {
 
 	public void eat(IItem itemToEat)
 	{
-		Debug.Log("ESSEN");
-		//Lets go animator
+        //Lets go animator
 		quicktimeEvent.startEvent(1.0f);
-
 	}
 
 	//Called by Keyframe
 	public void finishedEating()
 	{
-		if (holdingItem.HasNut)
+		if (holdItem.HasNut)
 		{
 			Health = Health - 1;
 			if (OnHealthChanged != null) { OnHealthChanged(Health); }
 		}
+        finishAction();
 
-		eatingProgress = 0.0f;
-		DoSomethingCooldown[0] = DoSomethingCooldown[1];
-		holdingItem = null;
+        if (!holdItem.HasNut)
+            soothed();
+		holdItem = null;
 	}
 
 
 	//Called by Keyframe
 	public void finishedPuttingIntoCart()
 	{
-		Debug.Log("Finished Putting Into Cart");
-		StoreItemEvent.Send(holdingItem);
-		holdingItem = null;
+		StoreItemEvent.Send(holdItem);
+        finishAction();
+		holdItem = null;
 	}
 
-	public IItem TakeItem()
+	public IItem TakeItem(bool forcefully)
 	{
-		IItem item = holdingItem;
-		holdingItem = null;
+		IItem item = holdItem;
+        if(forcefully)
+        {
+            enrage();
+            holdItem = null;
+        }
+        finishAction();
 		return item;
 	}
+
+    public void enrage()
+    { enrageEffect[0] = enrageEffect[1]; }
+
+    public void soothed()
+    { soothedEffect[0] = soothedEffect[1]; }
+
+
+    private void finishAction()
+    {
+        eatingProgress = 0.0f;
+        DoSomethingCooldown[0] = DoSomethingCooldown[1];
+    }
+
+    private float calculateEffectValue(float input)
+    {
+        //Falls beide aktiv, heben sie sich auf.
+        if (soothedEffect[0] > 0.0f && enrageEffect[0] > 0.0f)
+            return input;
+        else if (soothedEffect[0] > 0.0f)
+            return (input * soothedEffect[2]);
+        else if (enrageEffect[0] > 0.0f)
+            return (input * enrageEffect[2]);
+
+        return input;
+
+    }
+
 }

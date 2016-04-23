@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+
 
 public class MotherBehaviour : MonoBehaviour {
 
-    public IItem holdingItem;
+    public IItem holdItem;
     
 
     [SerializeField]
@@ -13,6 +13,7 @@ public class MotherBehaviour : MonoBehaviour {
     public bool inspecting;
     
     public QuicktimeEvent quicktimeEvent;
+
     [SerializeField]
     private float quickTimeRate;
 
@@ -22,65 +23,83 @@ public class MotherBehaviour : MonoBehaviour {
         quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
     }
 
-    public void setItem(IItem item)
+    public void takeFromShelf(IItem item)
     {
-        holdingItem = item;
+        holdItem = item;
+        Debug.Log(item.ToString());
         //Aktiviere Buttons o.Ä.
     }
 
     public bool handsFree()
     {
-        return (holdingItem == null);
+        return (holdItem == null);
     }
 
-    void setHandsFree()
+    private void setHandsFree()
     {
         GrabItemEvent.Send(null);
         inspecting = false;
-        holdingItem = null;
+        holdItem = null;
     }
 
-   
+    public void throwAway()
+    {
+        //AnimationStuff();
+        if (holdItem.Equals(child.holdItem) && !holdItem.HasNut)
+            child.enrage();
+
+
+        setHandsFree();
+    }
+    public void putIntoCart()
+    {
+        StoreItemEvent.Send(holdItem);
+        setHandsFree();
+    }
 
     public void giveToChild()
     {
-        child.eat(holdingItem);
+        child.eat(holdItem);
         setHandsFree();
     }
 
     public void inspect()
     {
 		inspecting = true;
-		GrabItemEvent.Send(holdingItem);
+		GrabItemEvent.Send(holdItem);
     }
 
     public void checkChildItem()
     {
         if (quicktimeEvent.tryToInspect())
         { 
-            if(child.holdingItem != null)
-            { 
-                holdingItem = child.TakeItem();
+            if(child.holdItem != null)
+            {
+                holdItem = child.TakeItem(false);
                 inspect();
             }
         }
     }
 
-    public void throwAway()
-    {
-        //AnimationStuff();
-        setHandsFree();
-    }
-
     public void takeFromChild()
     {
-        if (quicktimeEvent.influenceEvent(-quickTimeRate) && child.holdingItem != null)
-            holdingItem = child.TakeItem();
+        float value = Random.Range(0.0f, 3.0f) * quickTimeRate;
+        if (quicktimeEvent.influenceEvent(-value) && child.holdItem != null)
+        {
+            holdItem = child.TakeItem(true);
+            throwAway();
+        }
     }
 
-    public void putIntoCart()
+
+
+    public void approveKasse()
     {
-        StoreItemEvent.Send(holdingItem);
         setHandsFree();
     }
+
+
+
+
+
 }
