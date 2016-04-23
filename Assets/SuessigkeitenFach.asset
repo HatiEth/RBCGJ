@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 124040, guid: 197a221501f61c247a601d30b1b580e6, type: 2}
   - {fileID: 124040, guid: 6a3eabf2d94f6684f94bdc5e961e7929, type: 2}
   m_FachSprites:
-  - {fileID: 21300000, guid: aef9147622e4d0248bf537caa25b08d7, type: 3}
+  - {fileID: 21300000, guid: 2a3787a7ee4d6874e8a1dadd6ef62a8f, type: 3}
   m_Ingredients:
   - m_Name: Walnuss
     m_HasNut: 1
