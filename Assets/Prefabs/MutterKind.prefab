@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 404986}
   - 61: {fileID: 6181318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 405416}
   - 61: {fileID: 6104366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitzoneMitte
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 422040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitzoneOben
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -77,6 +77,7 @@ GameObject:
   - 114: {fileID: 11492422}
   - 114: {fileID: 11409434}
   - 114: {fileID: 11469088}
+  - 82: {fileID: 8267566}
   m_Layer: 0
   m_Name: Mutter
   m_TagString: Untagged
@@ -107,7 +108,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitzoneUnten
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -137,7 +138,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +184,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 419612}
   - 114: {fileID: 11482200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +200,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 442320}
   - 212: {fileID: 21291588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Einkaufswagen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +216,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 424800}
   - 61: {fileID: 6161768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +236,8 @@ GameObject:
   - 95: {fileID: 9501918}
   - 114: {fileID: 11482314}
   - 114: {fileID: 11427154}
-  m_Layer: 0
+  - 82: {fileID: 8243576}
+  m_Layer: 9
   m_Name: Kind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +450,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -523,6 +525,154 @@ BoxCollider2D:
   m_Offset: {x: 0.009815382, y: 0.8552073}
   serializedVersion: 2
   m_Size: {x: 0.048790537, y: 2.1366088}
+--- !u!82 &8243576
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191242}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &8267566
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140226}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9501918
 Animator:
   serializedVersion: 3
@@ -660,6 +810,9 @@ MonoBehaviour:
   inspecting: 0
   quicktimeEvent: {fileID: 0}
   quickTimeRate: 0.05
+  m_AudioTakeFromChild: {fileID: 8300000, guid: 8fcabe01ae15f82429d4e63c85ad739f,
+    type: 3}
+  m_AudioGiveChild: {fileID: 8300000, guid: b04db18d0a4409b479738abfae55cf99, type: 3}
 --- !u!212 &21221258
 SpriteRenderer:
   m_ObjectHideFlags: 1

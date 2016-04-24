@@ -27,10 +27,14 @@ public class MotherBehaviour : MonoBehaviour {
 	private int animId_tFailTakeItemChild;
 	private int animId_bIsHolding;
 
+	private new AudioSource audio;
+	public AudioClip m_AudioTakeFromChild;
+	public AudioClip m_AudioGiveChild;
 
 	// Use this for initialization
 	void Start()
 	{
+		audio = GetComponent<AudioSource>();
 		score = FindObjectOfType<ScoreSystem>();
 		GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
 		if (quicktimeEvent == null)
@@ -92,9 +96,10 @@ public class MotherBehaviour : MonoBehaviour {
 
 	public void giveToChild()
 	{
-		child.eat(holdItem);
+		child.eat(holdItem, true);
 		setHandsFree();
 		anim.SetTrigger(animId_tGiveItem);
+		audio.PlayOneShot(m_AudioGiveChild);
 	}
 
 	public void inspect()
@@ -110,6 +115,7 @@ public class MotherBehaviour : MonoBehaviour {
 			if (child.holdItem != null)
 			{
 				holdItem = child.TakeItem(false);
+				audio.PlayOneShot(m_AudioTakeFromChild);
 				anim.SetTrigger(animId_tTakeItemChild);
 				inspect();
 			}
@@ -126,6 +132,7 @@ public class MotherBehaviour : MonoBehaviour {
 		if (quicktimeEvent.influenceEvent(-value) && child.holdItem != null)
 		{
 			holdItem = child.TakeItem(true);
+			audio.PlayOneShot(m_AudioTakeFromChild);
 			throwAway();
 		}
 	}

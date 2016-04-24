@@ -28,11 +28,14 @@ public class ChildBehaviour : MonoBehaviour {
 	[SerializeField]
 	private int Health = 3;
 
-
 	private QuicktimeEvent quicktimeEvent;
 
 	public delegate void ChangeHealth(int newHealth);
 	public static event ChangeHealth OnHealthChanged;
+
+	private new AudioSource audio;
+	public AudioClip m_AudioEat;
+	public AudioClip m_AudioTakeItem;
 
 	// Use this for initialization
 	void Start()
@@ -118,6 +121,7 @@ public class ChildBehaviour : MonoBehaviour {
 			if (Random.Range(0, 6) == 0)
 			{
 				eat(holdItem);
+				audio.PlayOneShot(m_AudioTakeItem);
 			}
 			else
 			{
@@ -127,12 +131,15 @@ public class ChildBehaviour : MonoBehaviour {
 		}
 	}
 
-	public void eat(IItem itemToEat)
+	public void eat(IItem itemToEat, bool provided = false)
 	{
 		//Lets go animator
 		if (holdItem == null)
 			holdItem = itemToEat;
-		quicktimeEvent.startEvent(1.0f);
+		if (!provided)
+			quicktimeEvent.startEvent(1.0f);
+		else
+			finishedEating();
 	}
 
     public void applyDamage()
@@ -144,6 +151,7 @@ public class ChildBehaviour : MonoBehaviour {
 	//Called by Keyframe
 	public void finishedEating()
 	{
+		audio.PlayOneShot(m_AudioEat);
         if (holdItem.HasNut)
             applyDamage();
 
@@ -169,8 +177,8 @@ public class ChildBehaviour : MonoBehaviour {
 		if (forcefully)
 		{
 			enrage();
-			holdItem = null;
 		}
+		holdItem = null;
 		finishAction();
 		return item;
 	}
