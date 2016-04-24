@@ -180,16 +180,4 @@ public class ChildBehaviour : MonoBehaviour {
 
 
     
-	private float calculateEffectValue(float input)
-	{
-		//Falls beide aktiv, heben sie sich auf.
-		if (soothedEffect[0] > 0.0f && enrageEffect[0] > 0.0f)
-			return input;
-		else if (soothedEffect[0] > 0.0f)
-			return (input * soothedEffect[2]);
-		else if (enrageEffect[0] > 0.0f)
-			return (input * enrageEffect[2]);
-		return input;
-	}
-
 }
