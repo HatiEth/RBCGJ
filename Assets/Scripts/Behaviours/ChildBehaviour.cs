@@ -75,9 +75,35 @@ public class ChildBehaviour : MonoBehaviour {
 
 		if (DoSomethingCooldown[0] > 0)
 			DoSomethingCooldown[0] -= deltaTime;
+
+        if (soothedEffect[0] > 0)
+            soothedEffect[0] -= Time.deltaTime;
+
+        if (enrageEffect[0] > 0)
+            enrageEffect[0] -= Time.deltaTime;
 	}
 
-	private void makeDecision()
+    private void finishAction()
+    {
+        eatingProgress = 0.0f;
+        DoSomethingCooldown[0] = DoSomethingCooldown[1];
+    }
+
+    private float calculateEffectValue(float input)
+    {
+        //Falls beide aktiv, heben sie sich auf.
+        if (soothedEffect[0] > 0.0f && enrageEffect[0] > 0.0f)
+            return input;
+        else if (soothedEffect[0] > 0.0f)
+            return (input * soothedEffect[2]);
+        else if (enrageEffect[0] > 0.0f)
+            return (input * enrageEffect[2]);
+
+        return input;
+
+    }
+
+    private void makeDecision()
 	{
 		Enums.TakeType takeDecision = (Enums.TakeType)Random.Range(1, (int)Enums.TakeType.COUNT);
 		holdItem = takeControl.take(takeDecision);
@@ -85,15 +111,22 @@ public class ChildBehaviour : MonoBehaviour {
 		{
 			//1/3 Chance zu essen,  2/3 in den Wagen zu legen
 			if (Random.Range(0, 6) == 0)
+            {
 				eat(holdItem);
-			else
-				finishedPuttingIntoCart();
-		}
+            }
+            else
+            {
+                finishedPuttingIntoCart();
+            }
+
+        }
 	}
 
 	public void eat(IItem itemToEat)
 	{
         //Lets go animator
+        if (holdItem == null)
+            holdItem = itemToEat;
 		quicktimeEvent.startEvent(1.0f);
 	}
 
@@ -140,24 +173,6 @@ public class ChildBehaviour : MonoBehaviour {
     { soothedEffect[0] = soothedEffect[1]; }
 
 
-    private void finishAction()
-    {
-        eatingProgress = 0.0f;
-        DoSomethingCooldown[0] = DoSomethingCooldown[1];
-    }
-
-    private float calculateEffectValue(float input)
-    {
-        //Falls beide aktiv, heben sie sich auf.
-        if (soothedEffect[0] > 0.0f && enrageEffect[0] > 0.0f)
-            return input;
-        else if (soothedEffect[0] > 0.0f)
-            return (input * soothedEffect[2]);
-        else if (enrageEffect[0] > 0.0f)
-            return (input * enrageEffect[2]);
-
-        return input;
-
-    }
+    
 
 }

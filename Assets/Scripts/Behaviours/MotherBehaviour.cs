@@ -19,8 +19,16 @@ public class MotherBehaviour : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
-        quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
+        GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
+        if( quicktimeEvent == null)
+            quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
+    }
+
+    private void setHandsFree()
+    {
+        GrabItemEvent.Send(null);
+        inspecting = false;
+        holdItem = null;
     }
 
     public void takeFromShelf(IItem item)
@@ -35,12 +43,7 @@ public class MotherBehaviour : MonoBehaviour {
         return (holdItem == null);
     }
 
-    private void setHandsFree()
-    {
-        GrabItemEvent.Send(null);
-        inspecting = false;
-        holdItem = null;
-    }
+    
 
     public void throwAway()
     {
@@ -90,7 +93,6 @@ public class MotherBehaviour : MonoBehaviour {
             throwAway();
         }
     }
-
 
 
     public void approveKasse()
