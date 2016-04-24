@@ -76,6 +76,7 @@ GameObject:
   - 114: {fileID: 11492422}
   - 114: {fileID: 11409434}
   - 114: {fileID: 11469088}
+  - 95: {fileID: 9585224}
   m_Layer: 0
   m_Name: Mutter
   m_TagString: Untagged
@@ -492,6 +493,23 @@ BoxCollider2D:
   m_Offset: {x: 0.0000023692846, y: 2.7683325}
   serializedVersion: 2
   m_Size: {x: 0.31665272, y: 6.5365853}
+--- !u!95 &9585224
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140226}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 954075f2062078a4c979d7836f644561, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11409434
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ using System.Collections;
 public class EnableOnGameOver : MonoBehaviour {
 
 	private Text m_Text;
+	public Image m_Image;
 	private bool GameOvered = false;
 	[SerializeField]
 	private float FadeIn = 1f;
@@ -14,6 +15,7 @@ public class EnableOnGameOver : MonoBehaviour {
 	void Start () {
 		m_Text = GetComponent<Text>();
 		m_Text.enabled = false;
+		m_Image.enabled = false;
 
 		GameOverEvent.On += Enable;	
 	}
@@ -26,13 +28,25 @@ public class EnableOnGameOver : MonoBehaviour {
 	void Enable()
 	{
 		m_Text.enabled = true;
-		m_Text.CrossFadeAlpha(1f, FadeIn, true);
+		m_Image.enabled = true;
 		StartCoroutine(Fade());
 	}
 	
 	IEnumerator Fade()
 	{
-		yield return new WaitForSeconds(FadeIn);
+		Color c = m_Text.color;
+		c.a = 0f;
+		m_Text.color = c;
+		yield return null;
+
+		while(c.a < 1f)
+		{
+			c.a += Time.fixedDeltaTime * FadeIn;
+			m_Text.color = c;
+			yield return null;
+		}
+		c.a = 1f;
+		m_Text.color = c;
 		GameOvered = true;
 	}
 

@@ -42,5 +42,6 @@ public class SadDaySlowdown : MonoBehaviour {
 		grayscale.rampOffset = -1f;
 
 		GameOverEvent.Send();
+		grayscale.rampOffset = 0f;
 	}
 }
