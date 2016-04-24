@@ -1,0 +1,705 @@
+fileFormatVersion: 2
+guid: 1534540d66294e345ae377a64ea0e054
+timeCreated: 1461497765
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Mother_IdleHolding_0
+    21300002: Mother_IdleHolding_1
+    21300004: Mother_IdleHolding_2
+    21300006: Mother_IdleHolding_3
+    21300008: Mother_IdleHolding_4
+    21300010: Mother_IdleHolding_5
+    21300012: Mother_IdleHolding_6
+    21300014: Mother_IdleHolding_7
+    21300016: Mother_IdleHolding_8
+    21300018: Mother_IdleHolding_9
+    21300020: Mother_IdleHolding_10
+    21300022: Mother_IdleHolding_11
+    21300024: Mother_IdleHolding_12
+    21300026: Mother_IdleHolding_13
+    21300028: Mother_IdleHolding_14
+    21300030: Mother_IdleHolding_15
+    21300032: Mother_IdleHolding_16
+    21300034: Mother_IdleHolding_17
+    21300036: Mother_IdleHolding_18
+    21300038: Mother_IdleHolding_19
+    21300040: Mother_IdleHolding_20
+    21300042: Mother_IdleHolding_21
+    21300044: Mother_IdleHolding_22
+    21300046: Mother_IdleHolding_23
+    21300048: Mother_IdleHolding_24
+    21300050: Mother_IdleHolding_25
+    21300052: Mother_IdleHolding_26
+    21300054: Mother_IdleHolding_27
+    21300056: Mother_IdleHolding_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 120
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Mother_IdleHolding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.399994, y: 99}
+        - {x: -52.399994, y: -64}
+        - {x: -52.399994, y: -102}
+        - {x: 79.600006, y: -102}
+        - {x: 79.600006, y: 62}
+        - {x: 40.600006, y: 99}
+    - name: Mother_IdleHolding_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.399994, y: 100}
+        - {x: -36.399994, y: 98}
+        - {x: -52.399994, y: -17}
+        - {x: -52.399994, y: -101}
+        - {x: 64.600006, y: -101}
+        - {x: 79.600006, y: -81}
+        - {x: 79.600006, y: 98}
+        - {x: 76.600006, y: 100}
+    - name: Mother_IdleHolding_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73.599976, y: 32}
+        - {x: 32.599976, y: 100}
+        - {x: -6.4000244, y: 100}
+        - {x: -14.400024, y: 94}
+        - {x: -52.400024, y: -67}
+        - {x: -52.400024, y: -99}
+        - {x: -47.400024, y: -101}
+        - {x: 14.599976, y: -101}
+        - {x: 51.599976, y: -88}
+        - {x: 79.599976, y: -16}
+        - {x: 79.599976, y: 16}
+    - name: Mother_IdleHolding_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.400024, y: 101}
+        - {x: -52.400024, y: -22}
+        - {x: -52.400024, y: -100}
+        - {x: 72.599976, y: -100}
+        - {x: 79.599976, y: -95}
+        - {x: 79.599976, y: 101}
+    - name: Mother_IdleHolding_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.599976, y: 11}
+        - {x: 79.599976, y: 15}
+        - {x: 65.599976, y: 27}
+        - {x: 49.599976, y: 101}
+        - {x: -2.4000244, y: 101}
+        - {x: -19.400024, y: 94}
+        - {x: -51.400024, y: -51}
+        - {x: -51.400024, y: -87}
+        - {x: -39.400024, y: -100}
+        - {x: -27.400024, y: -100}
+        - {x: -17.400024, y: -97}
+        - {x: -15.400024, y: -100}
+        - {x: 34.599976, y: -100}
+        - {x: 33.599976, y: -88}
+        - {x: 27.599976, y: -81}
+        - {x: 76.599976, y: 2}
+    - name: Mother_IdleHolding_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.599976, y: 10}
+        - {x: 79.599976, y: 16}
+        - {x: 64.599976, y: 29}
+        - {x: 38.599976, y: 102}
+        - {x: -37.400024, y: 102}
+        - {x: -50.400024, y: 38}
+        - {x: -50.400024, y: -88}
+        - {x: -32.400024, y: -101}
+        - {x: 26.599976, y: -101}
+        - {x: 28.599976, y: -91}
+        - {x: 21.599976, y: -84}
+        - {x: 71.599976, y: -8}
+    - name: Mother_IdleHolding_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62.599976, y: 27}
+        - {x: 38.599976, y: 95}
+        - {x: 28.599976, y: 102}
+        - {x: -19.400024, y: 102}
+        - {x: -47.400024, y: 14}
+        - {x: -47.400024, y: -97}
+        - {x: -22.400024, y: -100}
+        - {x: -20.400024, y: -95}
+        - {x: -20.400024, y: -86}
+        - {x: -20.400024, y: -97}
+        - {x: -15.400024, y: -101}
+        - {x: -11.400024, y: -103}
+        - {x: 30.599976, y: -103}
+        - {x: 79.599976, y: 5}
+        - {x: 79.599976, y: 18}
+        - {x: 66.599976, y: 26}
+    - name: Mother_IdleHolding_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.599976, y: 102}
+        - {x: -13.400024, y: 102}
+        - {x: -44.400024, y: 21}
+        - {x: -44.400024, y: -93}
+        - {x: -21.400024, y: -104}
+        - {x: 14.599976, y: -104}
+        - {x: 73.599976, y: -18}
+        - {x: 79.599976, y: -7}
+        - {x: 79.599976, y: 39}
+    - name: Mother_IdleHolding_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.600006, y: 102}
+        - {x: -2.399994, y: 102}
+        - {x: -18.399994, y: 97}
+        - {x: -8.399994, y: 79}
+        - {x: 2.600006, y: 66}
+        - {x: -13.399994, y: 54}
+        - {x: -40.399994, y: 34}
+        - {x: -40.399994, y: -105}
+        - {x: -4.399994, y: -105}
+        - {x: -0.3999939, y: -103}
+        - {x: 68.600006, y: -9}
+        - {x: 79.600006, y: 6}
+        - {x: 79.600006, y: 16}
+    - name: Mother_IdleHolding_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.600006, y: 46}
+        - {x: 44.600006, y: 100}
+        - {x: 34.600006, y: 102}
+        - {x: -11.399994, y: 102}
+        - {x: -49.399994, y: -48}
+        - {x: -49.399994, y: -94}
+        - {x: -42.399994, y: -101}
+        - {x: -30.399994, y: -104}
+        - {x: 4.600006, y: -104}
+        - {x: 15.600006, y: -51}
+        - {x: 59.600006, y: -25}
+        - {x: 79.600006, y: -1}
+    - name: Mother_IdleHolding_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59.599976, y: 101}
+        - {x: -21.400024, y: 101}
+        - {x: -57.400024, y: -73}
+        - {x: -57.400024, y: -84}
+        - {x: -48.400024, y: -100}
+        - {x: -25.400024, y: -105}
+        - {x: -21.400024, y: -96}
+        - {x: -6.4000244, y: -103}
+        - {x: 4.5999756, y: -105}
+        - {x: 9.599976, y: -105}
+        - {x: 12.599976, y: -102}
+        - {x: 79.599976, y: -61}
+        - {x: 79.599976, y: 56}
+    - name: Mother_IdleHolding_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.599976, y: 101}
+        - {x: -8.400024, y: 101}
+        - {x: -20.400024, y: 94}
+        - {x: -63.400024, y: -53}
+        - {x: -63.400024, y: -90}
+        - {x: -46.400024, y: -103}
+        - {x: -42.400024, y: -103}
+        - {x: -31.400024, y: -98}
+        - {x: -33.400024, y: -90}
+        - {x: -16.400024, y: -103}
+        - {x: 46.599976, y: -103}
+        - {x: 79.599976, y: -57}
+        - {x: 79.599976, y: 59}
+        - {x: 47.599976, y: 94}
+    - name: Mother_IdleHolding_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.400024, y: 100}
+        - {x: -28.400024, y: 92}
+        - {x: -68.400024, y: -46}
+        - {x: -68.400024, y: -100}
+        - {x: -67.400024, y: -101}
+        - {x: 52.599976, y: -101}
+        - {x: 79.599976, y: 6}
+        - {x: 79.599976, y: 20}
+        - {x: 40.599976, y: 100}
+    - name: Mother_IdleHolding_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.599976, y: -1}
+        - {x: 79.599976, y: 76}
+        - {x: 41.599976, y: 100}
+        - {x: -55.400024, y: 100}
+        - {x: -71.400024, y: -2}
+        - {x: -71.400024, y: -89}
+        - {x: -57.400024, y: -100}
+        - {x: 28.599976, y: -100}
+        - {x: 42.599976, y: -95}
+        - {x: 46.599976, y: -86}
+        - {x: 36.599976, y: -78}
+    - name: Mother_IdleHolding_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66.599976, y: 28}
+        - {x: 32.599976, y: 99}
+        - {x: -47.400024, y: 99}
+        - {x: -73.400024, y: -25}
+        - {x: -73.400024, y: -99}
+        - {x: 31.599976, y: -99}
+        - {x: 46.599976, y: -93}
+        - {x: 50.599976, y: -83}
+        - {x: 79.599976, y: -30}
+        - {x: 79.599976, y: 15}
+    - name: Mother_IdleHolding_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.400024, y: 99}
+        - {x: -74.400024, y: 42}
+        - {x: -74.400024, y: -84}
+        - {x: -58.400024, y: -94}
+        - {x: -51.400024, y: -87}
+        - {x: 0.5999756, y: -99}
+        - {x: 68.599976, y: -99}
+        - {x: 79.599976, y: -72}
+        - {x: 79.599976, y: 99}
+    - name: Mother_IdleHolding_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.600006, y: 35}
+        - {x: 42.600006, y: 100}
+        - {x: -9.399994, y: 100}
+        - {x: -18.399994, y: 78}
+        - {x: -2.399994, y: 65}
+        - {x: -21.399994, y: 54}
+        - {x: -73.399994, y: -42}
+        - {x: -73.399994, y: -100}
+        - {x: 50.600006, y: -100}
+        - {x: 49.600006, y: -84}
+        - {x: 41.600006, y: -78}
+        - {x: 79.600006, y: -5}
+    - name: Mother_IdleHolding_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.399994, y: 100}
+        - {x: -71.399994, y: -28}
+        - {x: -71.399994, y: -100}
+        - {x: 61.600006, y: -100}
+        - {x: 79.600006, y: -3}
+        - {x: 79.600006, y: 19}
+        - {x: 41.600006, y: 100}
+    - name: Mother_IdleHolding_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.599976, y: 99}
+        - {x: 32.599976, y: 101}
+        - {x: -8.400024, y: 101}
+        - {x: -58.400024, y: -21}
+        - {x: -67.400024, y: -48}
+        - {x: -67.400024, y: -98}
+        - {x: -47.400024, y: -95}
+        - {x: -42.400024, y: -86}
+        - {x: -7.4000244, y: -101}
+        - {x: 53.599976, y: -101}
+        - {x: 79.599976, y: -6}
+        - {x: 79.599976, y: 14}
+        - {x: 64.599976, y: 29}
+    - name: Mother_IdleHolding_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.599976, y: 101}
+        - {x: -19.400024, y: 101}
+        - {x: -60.400024, y: -31}
+        - {x: -63.400024, y: -45}
+        - {x: -63.400024, y: -99}
+        - {x: -59.400024, y: -102}
+        - {x: 46.599976, y: -102}
+        - {x: 79.599976, y: -11}
+        - {x: 79.599976, y: 33}
+        - {x: 40.599976, y: 91}
+    - name: Mother_IdleHolding_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65.599976, y: 27}
+        - {x: 60.599976, y: 26}
+        - {x: 49.599976, y: 67}
+        - {x: 33.599976, y: 102}
+        - {x: -19.400024, y: 102}
+        - {x: -58.400024, y: -32}
+        - {x: -58.400024, y: -102}
+        - {x: -57.400024, y: -103}
+        - {x: 28.599976, y: -103}
+        - {x: 27.599976, y: -93}
+        - {x: 79.599976, y: -31}
+        - {x: 79.599976, y: 15}
+    - name: Mother_IdleHolding_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.400024, y: -48}
+        - {x: -53.400024, y: -92}
+        - {x: -30.400024, y: -104}
+        - {x: -30.400024, y: -105}
+        - {x: 29.599976, y: -105}
+        - {x: 79.599976, y: -72}
+        - {x: 79.599976, y: 63}
+        - {x: 37.599976, y: 102}
+        - {x: -5.4000244, y: 102}
+        - {x: -13.400024, y: 84}
+    - name: Mother_IdleHolding_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.400024, y: 93}
+        - {x: -33.400024, y: 13}
+        - {x: -47.400024, y: -68}
+        - {x: -47.400024, y: -97}
+        - {x: -42.400024, y: -105}
+        - {x: 28.599976, y: -105}
+        - {x: 79.599976, y: -52}
+        - {x: 79.599976, y: 50}
+        - {x: 42.599976, y: 102}
+        - {x: 1.5999756, y: 102}
+        - {x: -2.4000244, y: 100}
+        - {x: -6.4000244, y: 97}
+    - name: Mother_IdleHolding_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.4000244, y: 102}
+        - {x: -15.400024, y: 91}
+        - {x: -31.400024, y: -14}
+        - {x: -38.400024, y: -61}
+        - {x: -38.400024, y: -85}
+        - {x: -34.400024, y: -98}
+        - {x: -23.400024, y: -106}
+        - {x: 7.5999756, y: -106}
+        - {x: 79.599976, y: -66}
+        - {x: 79.599976, y: 102}
+    - name: Mother_IdleHolding_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79.600006, y: 7}
+        - {x: 79.600006, y: 18}
+        - {x: 65.600006, y: 28}
+        - {x: 51.600006, y: 74}
+        - {x: 31.600006, y: 101}
+        - {x: -3.399994, y: 101}
+        - {x: -15.399994, y: 90}
+        - {x: -38.399994, y: -22}
+        - {x: -38.399994, y: -105}
+        - {x: 5.600006, y: -105}
+        - {x: 10.600006, y: -90}
+        - {x: 69.600006, y: -11}
+    - name: Mother_IdleHolding_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.399994, y: 101}
+        - {x: -43.399994, y: 57}
+        - {x: -43.399994, y: -104}
+        - {x: 63.600006, y: -104}
+        - {x: 79.600006, y: -92}
+        - {x: 79.600006, y: 58}
+        - {x: 36.600006, y: 101}
+    - name: Mother_IdleHolding_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.400024, y: 100}
+        - {x: -47.400024, y: 21}
+        - {x: -47.400024, y: -103}
+        - {x: 48.599976, y: -103}
+        - {x: 79.599976, y: 9}
+        - {x: 79.599976, y: 17}
+        - {x: 41.599976, y: 100}
+    - name: Mother_IdleHolding_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.400024, y: 100}
+        - {x: -49.400024, y: 0}
+        - {x: -49.400024, y: -102}
+        - {x: 79.599976, y: -102}
+        - {x: 79.599976, y: 51}
+        - {x: 48.599976, y: 100}
+    - name: Mother_IdleHolding_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.65, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65.599976, y: 99}
+        - {x: -19.400024, y: 99}
+        - {x: -51.400024, y: 47}
+        - {x: -51.400024, y: -101}
+        - {x: 77.599976, y: -101}
+        - {x: 79.599976, y: -100}
+        - {x: 79.599976, y: 83}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

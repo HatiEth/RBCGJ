@@ -34,7 +34,7 @@ public class TakeControl : MonoBehaviour {
 				selectedZone = unten;
 				break;
 		}
-        RaycastHit2D hit = Physics2D.BoxCast(selectedZone.transform.position, new Vector2(0.9f, 1f/3f),0,Vector2.zero, 0f, mask);
+        RaycastHit2D hit = Physics2D.BoxCast(selectedZone.transform.position, new Vector2(0.9f, 1f/3f), 0,Vector2.zero, 0f, mask);
 
 		if (hit.collider != null)
 		{

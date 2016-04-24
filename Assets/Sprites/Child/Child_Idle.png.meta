@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: fe9ce1d110e73cd46845015543d5cf12
+timeCreated: 1461491731
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Child_Idle_0
+    21300002: Child_Idle_1
+    21300004: Child_Idle_2
+    21300006: Child_Idle_3
+    21300008: Child_Idle_4
+    21300010: Child_Idle_5
+    21300012: Child_Idle_6
+    21300014: Child_Idle_7
+    21300016: Child_Idle_8
+    21300018: Child_Idle_9
+    21300020: Child_Idle_10
+    21300022: Child_Idle_11
+    21300024: Child_Idle_12
+    21300026: Child_Idle_13
+    21300028: Child_Idle_14
+    21300030: Child_Idle_15
+    21300032: Child_Idle_16
+    21300034: Child_Idle_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Child_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 50}
+        - {x: -25, y: 28}
+        - {x: -25, y: -36}
+        - {x: -22, y: -50}
+        - {x: -11, y: -53}
+        - {x: 12, y: -53}
+        - {x: 20, y: -17}
+        - {x: 24, y: 10}
+        - {x: 24, y: 50}
+    - name: Child_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 50}
+        - {x: -13, y: 50}
+        - {x: -22, y: 32}
+        - {x: -22, y: -18}
+        - {x: -15, y: -49}
+        - {x: -11, y: -52}
+        - {x: 2, y: -52}
+        - {x: 9, y: -49}
+        - {x: 17, y: -26}
+        - {x: 25, y: 16}
+        - {x: 25, y: 49}
+    - name: Child_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 49}
+        - {x: -15, y: 39}
+        - {x: -22, y: 24}
+        - {x: -22, y: -2}
+        - {x: -12, y: -48}
+        - {x: -7, y: -52}
+        - {x: 20, y: -52}
+        - {x: 25, y: -25}
+        - {x: 25, y: 46}
+        - {x: 12, y: 49}
+    - name: Child_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 48}
+        - {x: -18, y: 48}
+        - {x: -23, y: 47}
+        - {x: -23, y: -53}
+        - {x: 9, y: -53}
+        - {x: 16, y: -50}
+        - {x: 26, y: 3}
+        - {x: 26, y: 42}
+        - {x: 21, y: 46}
+    - name: Child_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 49}
+        - {x: -20, y: 29}
+        - {x: -20, y: -21}
+        - {x: -11, y: -52}
+        - {x: 15, y: -52}
+        - {x: 27, y: -17}
+        - {x: 27, y: 48}
+        - {x: 25, y: 49}
+    - name: Child_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 50}
+        - {x: 2, y: 50}
+        - {x: -8, y: 47}
+        - {x: -20, y: 22}
+        - {x: -20, y: -3}
+        - {x: -12, y: -49}
+        - {x: -5, y: -52}
+        - {x: 11, y: -52}
+        - {x: 25, y: -29}
+        - {x: 27, y: -1}
+        - {x: 27, y: 45}
+    - name: Child_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 50}
+        - {x: -21, y: -53}
+        - {x: 11, y: -53}
+        - {x: 18, y: -51}
+        - {x: 28, y: 7}
+        - {x: 28, y: 50}
+    - name: Child_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 50}
+        - {x: -18, y: 25}
+        - {x: -18, y: -17}
+        - {x: -9, y: -52}
+        - {x: 17, y: -52}
+        - {x: 29, y: 8}
+        - {x: 29, y: 50}
+    - name: Child_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 49}
+        - {x: -18, y: 34}
+        - {x: -18, y: -25}
+        - {x: -8, y: -52}
+        - {x: 24, y: -52}
+        - {x: 29, y: -25}
+        - {x: 29, y: 47}
+        - {x: 21, y: 49}
+    - name: Child_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 48}
+        - {x: -14, y: 48}
+        - {x: -19, y: 47}
+        - {x: -19, y: -53}
+        - {x: 13, y: -53}
+        - {x: 20, y: -50}
+        - {x: 30, y: 3}
+        - {x: 30, y: 42}
+        - {x: 25, y: 46}
+    - name: Child_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 49}
+        - {x: -16, y: -52}
+        - {x: 19, y: -52}
+        - {x: 31, y: -17}
+        - {x: 31, y: 47}
+        - {x: 25, y: 49}
+    - name: Child_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1878
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 50}
+        - {x: -16, y: 28}
+        - {x: -16, y: -15}
+        - {x: -8, y: -49}
+        - {x: -5, y: -52}
+        - {x: 26, y: -52}
+        - {x: 32, y: -35}
+        - {x: 32, y: 49}
+        - {x: 29, y: 50}
+    - name: Child_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 49}
+        - {x: -25, y: -55}
+        - {x: 24, y: -55}
+        - {x: 24, y: 49}
+    - name: Child_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 49}
+        - {x: -8, y: 49}
+        - {x: -11, y: 48}
+        - {x: -22, y: 18}
+        - {x: -22, y: -10}
+        - {x: -16, y: -52}
+        - {x: 7, y: -52}
+        - {x: 24, y: -26}
+        - {x: 25, y: 0}
+        - {x: 25, y: 45}
+    - name: Child_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 48}
+        - {x: -22, y: 34}
+        - {x: -22, y: -22}
+        - {x: -11, y: -52}
+        - {x: 16, y: -52}
+        - {x: 25, y: -24}
+        - {x: 25, y: 47}
+        - {x: 23, y: 48}
+    - name: Child_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 48}
+        - {x: -6, y: 48}
+        - {x: -9, y: 46}
+        - {x: -23, y: 22}
+        - {x: -23, y: -14}
+        - {x: -15, y: -45}
+        - {x: -11, y: -50}
+        - {x: -4, y: -55}
+        - {x: 7, y: -55}
+        - {x: 16, y: -50}
+        - {x: 20, y: -27}
+        - {x: 26, y: 15}
+        - {x: 26, y: 43}
+    - name: Child_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 48}
+        - {x: -20, y: 48}
+        - {x: -20, y: -52}
+        - {x: 10, y: -52}
+        - {x: 24, y: -26}
+        - {x: 27, y: 1}
+        - {x: 27, y: 47}
+    - name: Child_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1708
+        width: 170
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 49}
+        - {x: -12, y: 39}
+        - {x: -20, y: 25}
+        - {x: -20, y: -17}
+        - {x: -14, y: -50}
+        - {x: -10, y: -53}
+        - {x: 22, y: -53}
+        - {x: 27, y: -37}
+        - {x: 27, y: 48}
+        - {x: 26, y: 49}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
