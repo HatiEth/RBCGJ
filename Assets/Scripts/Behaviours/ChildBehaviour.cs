@@ -14,7 +14,7 @@ public class ChildBehaviour : MonoBehaviour {
 	TakeControl takeControl;
 
 	[SerializeField]
-	private float[] DoSomethingCooldown = { 3.0f, 3.0f };
+	private float[] DoSomethingCooldown = { 5.0f, 5.0f };
 
 	[SerializeField]
 	//1. Wert = akutelle Dauer/Z�hler   2. Wert = Max Wert  3. Wert = Effekt der mit Zeit multipliziert wird
@@ -115,7 +115,7 @@ public class ChildBehaviour : MonoBehaviour {
 		holdItem = takeControl.take(takeDecision);
 		if (holdItem != null)
 		{
-			//1/3 Chance zu essen,  2/3 in den Wagen zu legen
+			//20% Chance etwas zu essen. Ansonsten essen.
 			if (Random.Range(0, 6) == 0)
             {
 				eat(holdItem);
