@@ -27,7 +27,7 @@ public class ChangeInspectedOnGrabItem : MonoBehaviour {
 			var go = GameObject.Instantiate(item.ItemPrefab);
 			Vector3 localpos = go.transform.localPosition;
 
-			go.transform.parent = this.transform;
+			go.transform.SetParent(this.transform);
 			go.transform.localPosition = localpos;
 			go.transform.localScale = Vector3.one;
 
