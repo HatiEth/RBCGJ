@@ -179,11 +179,6 @@ public class ChildBehaviour : MonoBehaviour {
 	{ soothedEffect[0] = soothedEffect[1]; }
 
 
-	private void finishAction()
-	{
-		eatingProgress = 0.0f;
-		DoSomethingCooldown[0] = DoSomethingCooldown[1];
-	}
     
 	private float calculateEffectValue(float input)
 	{
