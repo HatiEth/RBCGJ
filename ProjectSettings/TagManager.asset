@@ -47,3 +47,6 @@ TagManager:
   - name: Inspect
     uniqueID: 3620699593
     locked: 0
+  - name: GameOver
+    uniqueID: 1600764929
+    locked: 0
