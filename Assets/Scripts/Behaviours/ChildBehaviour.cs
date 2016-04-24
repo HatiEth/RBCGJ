@@ -65,6 +65,7 @@ public class ChildBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		anim.SetBool(animId_bHoldItem, holdItem != null);
 		if (KassenEvent.isRunning())
 			return;
 
@@ -132,10 +133,12 @@ public class ChildBehaviour : MonoBehaviour {
 			//20% Chance etwas zu essen. Ansonsten essen.
 			if (Random.Range(0, 6) == 0)
 			{
+				anim.SetTrigger(animId_tGrabItem);
 				eat(holdItem);
 			}
 			else
 			{
+				anim.SetTrigger(animId_tThrowItem);
 				finishedPuttingIntoCart();
 			}
 			audio.PlayOneShot(m_AudioTakeItem);
