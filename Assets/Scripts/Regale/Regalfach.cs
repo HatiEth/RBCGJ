@@ -24,7 +24,7 @@ public class Regalfach : MonoBehaviour {
 		// FIXME: Ben�tigt Abfrage was zugeordnet wurde
 		for(int i=0;i<ingrCount;++i)
 		{
-			item.AddIngredient(Config.PossibleIngredients.RetrieveRandom());
+			item.AddIngredient(Config.PossibleIngredients.RetrieveRandom(Config.MinIngredientsPerItem));
 		}
 		return (item);
 	}

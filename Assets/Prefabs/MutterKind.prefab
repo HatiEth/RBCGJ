@@ -749,6 +749,8 @@ MonoBehaviour:
   - 10
   - 0.8
   Health: 3
+  m_AudioEat: {fileID: 8300000, guid: b487016305e04f449bbe3c610a72bd05, type: 3}
+  m_AudioTakeItem: {fileID: 8300000, guid: b04db18d0a4409b479738abfae55cf99, type: 3}
 --- !u!114 &11469088
 MonoBehaviour:
   m_ObjectHideFlags: 1

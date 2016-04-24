@@ -40,6 +40,7 @@ public class ChildBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
+		audio = GetComponent<AudioSource>();
 		takeControl = GetComponent<TakeControl>();
 		quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
 		quicktimeEvent.gameObject.SetActive(false);
@@ -121,12 +122,12 @@ public class ChildBehaviour : MonoBehaviour {
 			if (Random.Range(0, 6) == 0)
 			{
 				eat(holdItem);
-				audio.PlayOneShot(m_AudioTakeItem);
 			}
 			else
 			{
 				finishedPuttingIntoCart();
 			}
+			audio.PlayOneShot(m_AudioTakeItem);
 
 		}
 	}
@@ -142,24 +143,33 @@ public class ChildBehaviour : MonoBehaviour {
 			finishedEating();
 	}
 
-    public void applyDamage()
-    {
-        Health = Health - 1;
-        if (OnHealthChanged != null) { OnHealthChanged(Health); }
-    }
+	public void applyDamage()
+	{
+		Health = Health - 1;
+		if (OnHealthChanged != null) { OnHealthChanged(Health); }
+	}
 
 	//Called by Keyframe
-	public void finishedEating()
+	public void finishedEating(IItem providedItem = null)
 	{
-		audio.PlayOneShot(m_AudioEat);
-        if (holdItem.HasNut)
-            applyDamage();
+		bool wasHoldItem = false;
+		if(providedItem == null)
+		{
+			providedItem = holdItem;
+			wasHoldItem = true;
+		}
+		if (providedItem.HasNut)
+			applyDamage();
 
 		finishAction();
 
-		if (!holdItem.HasNut)
+		if (!providedItem.HasNut)
 			soothed();
-		holdItem = null;
+
+		if(wasHoldItem)
+			holdItem = null;
+
+		audio.PlayOneShot(m_AudioEat);
 	}
 
 
