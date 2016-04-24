@@ -17,7 +17,7 @@ public class FakeTiles : MonoBehaviour {
 			for (float y = Tilemap.yMin; y < Tilemap.yMax; y += TileDimensionY)
 			{
 				GameObject go = GameObject.Instantiate(Tile, new Vector3(x, y, this.transform.position.z), Quaternion.identity) as GameObject;
-				//go.transform.SetParent(this.transform);
+				go.transform.SetParent(this.transform, false);
 			}
 		}
 	}

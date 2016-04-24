@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 407504}
   - 114: {fileID: 11428102}
+  - 114: {fileID: 11462332}
+  - 114: {fileID: 11439214}
   m_Layer: 0
   m_Name: ScoreSystem
   m_TagString: Untagged
@@ -39,11 +41,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfe388aa87df1d40b25c11c2d744f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  geld: {fileID: 0}
-  levelProgress: {fileID: 0}
-  hp1: {fileID: 0}
-  hp2: {fileID: 0}
-  hp3: {fileID: 0}
+--- !u!114 &11439214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af1173c8fab7f646a492918ebd67b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11462332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bb1a408e023e74d9bb23dcb756485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

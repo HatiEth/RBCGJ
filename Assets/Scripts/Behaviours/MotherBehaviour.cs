@@ -56,6 +56,8 @@ public class MotherBehaviour : MonoBehaviour {
 	{
 		holdItem = item;
 		Debug.Log(item.ToString());
+		anim.SetTrigger(animId_tGrabItem);
+		inspect();
 		//Aktiviere Buttons o.Ä.
 	}
 
@@ -99,7 +101,6 @@ public class MotherBehaviour : MonoBehaviour {
 	{
 		inspecting = true;
 		GrabItemEvent.Send(holdItem);
-		anim.SetTrigger(animId_tTakeItemChild);
 	}
 
 	public void checkChildItem()
@@ -109,6 +110,7 @@ public class MotherBehaviour : MonoBehaviour {
 			if (child.holdItem != null)
 			{
 				holdItem = child.TakeItem(false);
+				anim.SetTrigger(animId_tTakeItemChild);
 				inspect();
 			}
 		}

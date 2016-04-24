@@ -11,3 +11,9 @@ Sebastian Krause ([@HatiEth](www.twitter.com/HatiEth))
 Michelle Kaufmann
 Joscha Wülk ([@ShenToza](www.twitter.com/Shentoza))
 
+
+Music ["The Elevator Bossanova"](http://www.bensound.com/royalty-free-music/track/the-elevator-bossa-nova) and ["Sad Day"](http://www.bensound.com/royalty-free-music/track/sad-day) by: [Bensound.com](http://www.bensound.com/)
+
+Sounds: 
++ Child eats: https://www.freesound.org/people/Hoerspielwerkstatt_HEF/sounds/273155/
++ Child takes:https://www.freesound.org/people/Robinhood76/sounds/103592/
