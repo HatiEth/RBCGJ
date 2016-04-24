@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 public class KassenEvent : MonoBehaviour {
 
-    [SerializeField]
-    static private float[] timePerItem = { 0.0f, 1.0f };
+    static private float[] timePerItem = { 0.0f, 3.0f };
 
     static private bool m_running;
 
@@ -46,8 +45,11 @@ public class KassenEvent : MonoBehaviour {
 
     static private void finishEvent()
     {
-        items = null;
-        mom.handsFree();
+			items = null;
+			mom.handsFree();
+
+
+		SadDayEvent.Send(false);
     }
 
     static public void grabNextItem()

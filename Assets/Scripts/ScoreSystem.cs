@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour {
-    private int Score = 0;
+	private int Score = 0;
 
-    [SerializeField]
+	[SerializeField]
 	private List<IItem> Items = new List<IItem>();
 
 	public delegate void ScoreChange(int oldScore, int newScore);
 	public static event ScoreChange OnScoreChange;
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		OnScoreChange += (_, newScore) =>
 		{
 			Score = newScore;
@@ -21,7 +22,7 @@ public class ScoreSystem : MonoBehaviour {
 		{
 			Items.Add(item);
 
-			if(OnScoreChange != null)
+			if (OnScoreChange != null)
 			{
 				OnScoreChange(Score, Score + CalculateScore(item));
 			}
@@ -30,24 +31,25 @@ public class ScoreSystem : MonoBehaviour {
 		OnScoreChange(Score, Score);
 	}
 
-    public static void SendScoreChange(int oldScore, int newScore)
-    {
-        OnScoreChange(oldScore, newScore);
-    }
+	public static void SendScoreChange(int oldScore, int newScore)
+	{
+		OnScoreChange(oldScore, newScore);
+	}
 
-    public List<IItem> getList()
-    {
-        return Items;
-    }
+	public List<IItem> getList()
+	{
+		return Items;
+	}
 
-    public int getScore()
-    {
-        return Score;
-    }
+	public int getScore()
+	{
+		return Score;
+	}
 
-    public static int CalculateScore(IItem item)
-    {
-        return item.Ingredients.Length;
-    }
+	public static int CalculateScore(IItem item)
+	{
+		if (item == null) return 0;
+		return item.Ingredients.Length;
+	}
 
 }

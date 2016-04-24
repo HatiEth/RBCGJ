@@ -7,41 +7,51 @@ public class SadDaySlowdown : MonoBehaviour {
 	private UnityStandardAssets.ImageEffects.Grayscale grayscale;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		grayscale = GetComponent<UnityStandardAssets.ImageEffects.Grayscale>();
 		SadDayEvent.OnSadDay += StartSlowdown;
 
 	}
 
-	void StartSlowdown()
+	void StartSlowdown(bool isSadDay)
 	{
-		StartCoroutine(Slowdown());
+		StartCoroutine(Slowdown(isSadDay));
 	}
-	
+
 	// Update is called once per frame
-	void OnDestroy () {
+	void OnDestroy()
+	{
 		SadDayEvent.OnSadDay -= StartSlowdown;
 	}
 
-	IEnumerator Slowdown()
+	IEnumerator Slowdown(bool isSadDay)
 	{
-		while(Time.timeScale > 0f)
+		if (isSadDay)
 		{
-			Time.timeScale = Mathf.Clamp(Time.timeScale - m_fSlowdown * Time.fixedDeltaTime, 0f , 1f);
-			grayscale.scale = 1f - Time.timeScale;
-			yield return null;
+			while (Time.timeScale > 0f)
+			{
+				Time.timeScale = Mathf.Clamp(Time.timeScale - m_fSlowdown * Time.fixedDeltaTime, 0f, 1f);
+				grayscale.scale = 1f - Time.timeScale;
+				yield return null;
+			}
 		}
+
 
 		float Alpha = 0f;
 		while (Alpha < 1f)
 		{
 			Alpha += Time.fixedDeltaTime;
-			grayscale.rampOffset = -Alpha;
+			if(isSadDay)
+				grayscale.rampOffset = -Alpha;
+			else
+				grayscale.rampOffset = Alpha;
 			yield return null;
 		}
-		grayscale.rampOffset = -1f;
+		grayscale.rampOffset = isSadDay ? -1f : 0f;
 
-		GameOverEvent.Send();
+		GameOverEvent.Send(!isSadDay);
 		grayscale.rampOffset = 0f;
+		grayscale.scale = 0f;
 	}
 }

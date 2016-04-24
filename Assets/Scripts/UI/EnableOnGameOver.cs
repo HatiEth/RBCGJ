@@ -7,6 +7,7 @@ public class EnableOnGameOver : MonoBehaviour {
 
 	private Text m_Text;
 	public Image m_Image;
+	public Image GameOverImage;
 	private bool GameOvered = false;
 	[SerializeField]
 	private float FadeIn = 1f;
@@ -16,6 +17,7 @@ public class EnableOnGameOver : MonoBehaviour {
 		m_Text = GetComponent<Text>();
 		m_Text.enabled = false;
 		m_Image.enabled = false;
+		GameOverImage.enabled = false;
 
 		GameOverEvent.On += Enable;	
 	}
@@ -25,10 +27,16 @@ public class EnableOnGameOver : MonoBehaviour {
 		GameOverEvent.On -= Enable;
 	}
 
-	void Enable()
+	void Enable(bool won)
 	{
 		m_Text.enabled = true;
+
 		m_Image.enabled = true;
+		m_Image.color = won ? Color.white : Color.black;
+
+		if (!won)
+			GameOverImage.enabled = true;
+
 		StartCoroutine(Fade());
 	}
 	
@@ -42,6 +50,7 @@ public class EnableOnGameOver : MonoBehaviour {
 		while(c.a < 1f)
 		{
 			c.a += Time.fixedDeltaTime * FadeIn;
+			GameOverImage.color = c;
 			m_Text.color = c;
 			yield return null;
 		}

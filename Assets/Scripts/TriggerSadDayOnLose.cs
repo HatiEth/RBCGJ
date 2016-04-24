@@ -11,7 +11,7 @@ public class TriggerSadDayOnLose : MonoBehaviour {
 	public void Trigger(int newHealth)
 	{
 		if(newHealth <= 0)
-			SadDayEvent.Send();
+			SadDayEvent.Send(true);
 	}
 
 #if UNITY_EDITOR
@@ -19,7 +19,7 @@ public class TriggerSadDayOnLose : MonoBehaviour {
 	{
 		if(Input.GetKeyDown(KeyCode.F1))
 		{
-			SadDayEvent.Send();
+			SadDayEvent.Send(true);
 		}
 	}
 #endif

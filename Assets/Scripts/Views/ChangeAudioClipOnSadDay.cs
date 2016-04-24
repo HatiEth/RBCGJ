@@ -21,8 +21,9 @@ public class ChangeAudioClipOnSadDay : MonoBehaviour {
 	
 	}
 
-	void Change()
+	void Change(bool issadday)
 	{
+		if (!issadday) return;
 		audio.clip = m_NewClip;
 		audio.Play();
 	}
