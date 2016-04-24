@@ -36,7 +36,7 @@ public class MotherBehaviour : MonoBehaviour {
 	{
 		audio = GetComponent<AudioSource>();
 		score = FindObjectOfType<ScoreSystem>();
-		GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(0.75f, 0);
 		if (quicktimeEvent == null)
 			quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
 
@@ -59,7 +59,6 @@ public class MotherBehaviour : MonoBehaviour {
 	public void takeFromShelf(IItem item)
 	{
 		holdItem = item;
-		Debug.Log(item.ToString());
 		anim.SetTrigger(animId_tGrabItem);
 		inspect();
 		//Aktiviere Buttons o.Ä.

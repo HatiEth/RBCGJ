@@ -11,10 +11,19 @@ public class MenuRiegelOnMove : MonoBehaviour, IMoveHandler {
 	MenuRiegelOnMove Other;
 
 	protected bool m_IsMoving;
+	public bool SetSelected = false;
+
+	void Start()
+	{
+		Time.timeScale = 1f;
+		if(SetSelected)
+		{
+			EventSystem.current.SetSelectedGameObject(this.gameObject);
+		}
+	}
 
 	public void OnMove(AxisEventData eventData)
 	{
-		Debug.Log("Event onMove");
 		if (eventData.used) return;
 		eventData.Use();
 
@@ -25,6 +34,7 @@ public class MenuRiegelOnMove : MonoBehaviour, IMoveHandler {
 		}
 
 		m_IsMoving = true; Other.m_IsMoving = true;
+		Debug.Log("Event onMove");
 
 		Thumb.Lift();
 		Vector3 spawn = Other.transform.position;

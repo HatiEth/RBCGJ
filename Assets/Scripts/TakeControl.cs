@@ -12,6 +12,9 @@ public class TakeControl : MonoBehaviour {
 	[SerializeField]
 	private GameObject unten;
 
+	private float OnCooldown;
+	private float Delay = 0.8f;
+
 	//[SerializeField]
 	//private GameObject untenRechts;
 
@@ -20,6 +23,7 @@ public class TakeControl : MonoBehaviour {
 
 	public IItem take(Enums.TakeType takeAction)
 	{
+		if (OnCooldown + Delay > Time.realtimeSinceStartup) return null;
 		GameObject selectedZone = null;
 		//Debug.Log("Take:" + takeAction);
 		switch (takeAction)
@@ -38,6 +42,7 @@ public class TakeControl : MonoBehaviour {
 
 		if (hit.collider != null)
 		{
+			OnCooldown = Time.realtimeSinceStartup;
 			IItem item = hit.collider.gameObject.GetComponent<Regalfach>().GrabItem();
 			return item;
 		}

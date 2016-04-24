@@ -738,8 +738,8 @@ MonoBehaviour:
   eatingRate: 0.08
   quickTimeRate: 0.1
   DoSomethingCooldown:
-  - 1.5
-  - 1.5
+  - 2.2222223
+  - 2.2222223
   enrageEffect:
   - 10
   - 10
