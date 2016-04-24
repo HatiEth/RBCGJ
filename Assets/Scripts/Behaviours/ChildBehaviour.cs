@@ -37,9 +37,16 @@ public class ChildBehaviour : MonoBehaviour {
 	public AudioClip m_AudioEat;
 	public AudioClip m_AudioTakeItem;
 
+
+	private Animator anim;
+	private int animId_bHoldItem;
+	private int animId_tGrabItem;
+	private int animId_tThrowItem;
+
 	// Use this for initialization
 	void Start()
 	{
+		anim = GetComponent<Animator>();
 		audio = GetComponent<AudioSource>();
 		takeControl = GetComponent<TakeControl>();
 		quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
@@ -49,6 +56,10 @@ public class ChildBehaviour : MonoBehaviour {
 		{
 			OnHealthChanged(Health);
 		}
+
+		animId_bHoldItem = Animator.StringToHash("bHoldItem");
+		animId_tGrabItem = Animator.StringToHash("tGrabItem");
+		animId_tThrowItem = Animator.StringToHash("tThrowItem");
 	}
 
 	// Update is called once per frame
