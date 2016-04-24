@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ItemSpawningOnScore : MonoBehaviour {
 
-    private List<GameObject> itemsInCart;
+    private List<GameObject> itemsInCart = new List<GameObject>();
     [SerializeField]
     private int maxCount;
 
@@ -13,11 +13,10 @@ public class ItemSpawningOnScore : MonoBehaviour {
 
     private Transform m_spawnPoint;
 
-    private int lastScoreAdded;
+    private int lastScoreAdded = 0;
 
 	void Awake()
     {
-        itemsInCart = new List<GameObject>();
         m_spawnPoint = GetComponent<Transform>();
         ScoreSystem.OnScoreChange += (oldScore , newScore) =>
         {
@@ -28,7 +27,7 @@ public class ItemSpawningOnScore : MonoBehaviour {
                 {
                     GameObject added = (GameObject)Instantiate(prefab, m_spawnPoint.transform.position, Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward));
                     itemsInCart.Add(added);
-                    lastScoreAdded = newScore;
+                    lastScoreAdded += 10;
                 }
             }
             //Item rausnehmen
@@ -37,7 +36,7 @@ public class ItemSpawningOnScore : MonoBehaviour {
                 GameObject remove = itemsInCart[Random.Range(0, itemsInCart.Count)];
                 itemsInCart.Remove(remove);
                 Destroy(remove);
-                lastScoreAdded = newScore;
+                lastScoreAdded -= 10;
             }
 
         };

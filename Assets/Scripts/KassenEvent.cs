@@ -9,6 +9,7 @@ public class KassenEvent : MonoBehaviour {
 
     static private bool m_running;
 
+    [SerializeField]
     static List<IItem> items;
     static int currentIndex;
 
@@ -19,31 +20,48 @@ public class KassenEvent : MonoBehaviour {
         mom = FindObjectOfType<MotherBehaviour>();
         qt = FindObjectOfType<QuicktimeEvent>();
         m_running = false;
-        currentIndex = 0;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Endzone"), LayerMask.NameToLayer("Wagen"));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (timePerItem[0] <= 0.0f)
-            grabNextItem();
+        if(m_running)
+        {
+            if (timePerItem[0] <= 0.0f)
+                grabNextItem();
 
-        if (timePerItem[0] > timePerItem[1])
-            timePerItem[0] -= Time.deltaTime;
-	}
+            if (timePerItem[0] > 0.0f)
+                timePerItem[0] -= Time.deltaTime;
+        }
+    }
 
     private void beginEvent()
     {
+        currentIndex = 0;
         m_running = true;
         qt.finishEvent();
         items = FindObjectOfType<ScoreSystem>().getList();
         mom.putIntoCart();
     }
+
+    static private void finishEvent()
+    {
+        items = null;
+        mom.handsFree();
+    }
+
     static public void grabNextItem()
     {
         timePerItem[0] = timePerItem[1];
         IItem current = items[currentIndex++];
+        Debug.Log(current);
+        if (!mom.handsFree())
+            mom.approveKasse();
         mom.holdItem = current;
         mom.inspect();
+
+        if (currentIndex >= items.Count)
+            finishEvent();
     }
 
     static public bool isRunning()

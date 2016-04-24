@@ -130,14 +130,18 @@ public class ChildBehaviour : MonoBehaviour {
 		quicktimeEvent.startEvent(1.0f);
 	}
 
+    public void applyDamage()
+    {
+        Health = Health - 1;
+        if (OnHealthChanged != null) { OnHealthChanged(Health); }
+    }
+
 	//Called by Keyframe
 	public void finishedEating()
 	{
-		if (holdItem.HasNut)
-		{
-			Health = Health - 1;
-			if (OnHealthChanged != null) { OnHealthChanged(Health); }
-		}
+        if (holdItem.HasNut)
+            applyDamage();
+
         finishAction();
 
         if (!holdItem.HasNut)

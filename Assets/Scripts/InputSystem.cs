@@ -72,7 +72,7 @@ public class InputSystem : MonoBehaviour {
     {
         if (Input.GetButtonDown("ActionLeft"))
         {
-            motherBehaviour.throwAway();
+            motherBehaviour.denyKasse();
             KassenEvent.grabNextItem();
         }
         else if (Input.GetButtonDown("ActionDown"))

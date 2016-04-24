@@ -17,8 +17,11 @@ public class MotherBehaviour : MonoBehaviour {
     [SerializeField]
     private float quickTimeRate;
 
+    private ScoreSystem score;
+
     // Use this for initialization
     void Start () {
+        score = FindObjectOfType<ScoreSystem>();
         GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
         if( quicktimeEvent == null)
             quicktimeEvent = FindObjectOfType<QuicktimeEvent>();
@@ -97,11 +100,26 @@ public class MotherBehaviour : MonoBehaviour {
 
     public void approveKasse()
     {
+        if(holdItem.HasNut)
+        {
+            child.applyDamage();
+        }
+        setHandsFree();
+    }
+
+    public void denyKasse()
+    {
+        int oldScore = score.getScore();
+        int itemScore = ScoreSystem.CalculateScore(holdItem);
+        ScoreSystem.SendScoreChange(oldScore, oldScore - itemScore);
+        
         setHandsFree();
     }
 
 
-
-
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "End")
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
 }
